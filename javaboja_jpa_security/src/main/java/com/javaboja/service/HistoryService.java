@@ -15,6 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
+import com.javaboja.dao.HistoryDao;
 import com.javaboja.repository.HistoryRepository;
 import com.javaboja.vo.History;
 import com.javaboja.vo.Paging;

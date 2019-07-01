@@ -11,6 +11,7 @@ public class JavabojaJpaSecurityApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.javaboja.service;
+package com.javaboja.dao;
 
 
 
@@ -18,9 +18,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
-import com.javaboja.execution.HttpClientService;
-import com.javaboja.execution.JsonConverter;
 import com.javaboja.repository.PlaceRepository;
+import com.javaboja.utils.HttpClientService;
+import com.javaboja.utils.JsonConverter;
 import com.javaboja.vo.Paging;
 import com.javaboja.vo.Place;
 
@@ -39,34 +39,6 @@ public class PlaceDao {
 	@Autowired
 	PlaceRepository placeRepository;
 	
-//	@Transactional 
-//	 public void placeInsert(String kewyword, String url, String pageSize, String kakaoToken) { 
-//		 String httpResponse = ""; 
-//		 String is_end = "";
-//		 JSONArray placeArray = null;
-//		 int page=1; 
-//		 while(true) { 
-//			 
-//			 httpResponse = hcs.httpClientGet(kewyword, url, pageSize, page, kakaoToken);
-//			 is_end=jc.StringToJsonObject(httpResponse, "meta").get("is_end").toString();
-//			 placeArray=jc.stringToJsonArray(httpResponse,"documents");
-//				  for(int i=0; i<placeArray.size(); i++) {
-//							JSONObject tmpObj = (JSONObject) placeArray.get(i);
-//							Place place = new Place();
-//							place.setAddressName(tmpObj.get("address_name").toString());
-//							place.setPhone(tmpObj.get("phone").toString());
-//							place.setPlaceId(tmpObj.get("id").toString());
-//							place.setPlaceName(tmpObj.get("place_name").toString());
-//							place.setPlaceUrl(tmpObj.get("place_url").toString());
-//							place.setRoadAddressName(tmpObj.get("road_address_name").toString());
-//							place.setLongitude(tmpObj.get("x").toString());
-//							place.setLatitude(tmpObj.get("y").toString());
-//							em.persist(place);
-//				}
-//			 if(is_end.equals("true")) break;
-//			 page++;
-//		 }
-//	 }
 	@Transactional 
 	public void placeInsert(String keyword, List<JSONArray> list) { 
 		JSONArray placeArray = null;
@@ -95,6 +67,11 @@ public class PlaceDao {
 		}
 			
 	}
+	
+	public void placeDelete() { 
+		String jpql = "delete from Place";
+		em.createQuery(jpql).executeUpdate();
+	}
 	 
 	public long getPlaceCount() {
 		String jpql = "select count(p.placeId) from Place p";
@@ -108,25 +85,4 @@ public class PlaceDao {
 		 Pageable pageable = PageRequest.of(curPage-1, pagingVo.getPageSize());
 		 return placeRepository.findByKeyword(keyword, pageable);
 	}
-	 
-//	 @Transactional
-//		public void placeInsert(JSONArray placeArray) {
-//			PlaceVo placeVo = null;
-//			for(int i=0; i<placeArray.size(); i++) {
-//				JSONObject tmpObj = (JSONObject) placeArray.get(i);
-//				if(em.find(PlaceVo.class, tmpObj.get("id").toString())==null) {
-//					placeVo = new PlaceVo();
-//					placeVo.setAddressName(tmpObj.get("address_name").toString());
-//					placeVo.setPhone(tmpObj.get("phone").toString());
-//					placeVo.setPlaceId(tmpObj.get("id").toString());
-//					placeVo.setPlaceName(tmpObj.get("place_name").toString());
-//					placeVo.setPlaceUrl(tmpObj.get("place_url").toString());
-//					placeVo.setRoadAddressName(tmpObj.get("road_address_name").toString());
-//					placeVo.setLongitude(tmpObj.get("x").toString());
-//					placeVo.setLatitude(tmpObj.get("y").toString());
-//					em.persist(placeVo);
-//				}		
-//			}
-//		}
-	
 }

@@ -1,5 +1,7 @@
-package com.javaboja.service;
+package com.javaboja.dao;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -67,21 +69,25 @@ public class HistoryDao {
 	}
 	
 	public List<History> getPopularList(){
-//		String jpql = "select h.keyword, "
-//							+ "count(h.keyword) h.views "
-//							+ "from History h "
-//							+ "group by h.keyword "
-//							+ "order by h.views desc ";
 		String sql = "select keyword, "
 					+ "count(keyword) views "
 					+ "from History "
 					+ "group by keyword "
 					+ "order by views desc ";
 		Query query = em.createNativeQuery(sql);
-		List list = query.setMaxResults(10).getResultList();
-		for(int i=0;i<list.size();i++) {
-			log.info("carrey : "+list.get(i));
+		List<Object[]> queryResult = query.setMaxResults(10).getResultList();
+		List<History> popularList = new ArrayList<History>();
+		History history = null;
+		Object object[] = null;
+		for(int i=0; i<queryResult.size();i++) {
+				object = queryResult.get(i);
+				history = new History();
+				history.setKeyword(object[0].toString());
+				history.setViews(Integer.parseInt(object[1].toString()));
+				popularList.add(history);
+				object = null;
+				history = null;
 		}
-		return null;
+		return popularList;
 	}
 }
