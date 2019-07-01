@@ -3,6 +3,8 @@ package com.javaboja.vo;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,7 +16,8 @@ import lombok.Getter;
 @Table(name="Place")
 public class Place {
 	@Id
-	private String placeId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int placeId;
 	private String addressName;
 	private String phone;
 	private String placeName;
@@ -23,4 +26,6 @@ public class Place {
 	private String latitude;
 	private String longitude;
 	private String keyword;
+	
+	private String userId;
 }

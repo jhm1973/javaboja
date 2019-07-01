@@ -77,16 +77,13 @@ public class HistoryDao {
 		Query query = em.createNativeQuery(sql);
 		List<Object[]> queryResult = query.setMaxResults(10).getResultList();
 		List<History> popularList = new ArrayList<History>();
-		History history = null;
-		Object object[] = null;
+
 		for(int i=0; i<queryResult.size();i++) {
-				object = queryResult.get(i);
-				history = new History();
+				Object object[] = queryResult.get(i);
+				History history = new History();
 				history.setKeyword(object[0].toString());
 				history.setViews(Integer.parseInt(object[1].toString()));
 				popularList.add(history);
-				object = null;
-				history = null;
 		}
 		return popularList;
 	}

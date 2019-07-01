@@ -40,7 +40,7 @@ public class PlaceDao {
 	PlaceRepository placeRepository;
 	
 	@Transactional 
-	public void placeInsert(String keyword, List<JSONArray> list) { 
+	public void placeInsert(String userId, String keyword, List<JSONArray> list) { 
 		JSONArray placeArray = null;
 		JSONObject tmpObj = null;
 		Place place = null;
@@ -52,13 +52,14 @@ public class PlaceDao {
 				 place = new Place();
 				 place.setAddressName(tmpObj.get("address_name").toString());
 				 place.setPhone(tmpObj.get("phone").toString());
-				 place.setPlaceId(tmpObj.get("id").toString());
+				// place.setPlaceId(tmpObj.get("id").toString());
 				 place.setPlaceName(tmpObj.get("place_name").toString());
 				 place.setPlaceUrl(tmpObj.get("place_url").toString());
 				 place.setRoadAddressName(tmpObj.get("road_address_name").toString());
 				 place.setLongitude(tmpObj.get("x").toString());
 				 place.setLatitude(tmpObj.get("y").toString());
 				 place.setKeyword(keyword);
+				 place.setUserId(userId);
 				 em.persist(place);
 				 tmpObj = null;
 				 place = null;
@@ -68,21 +69,17 @@ public class PlaceDao {
 			
 	}
 	
-	public void placeDelete() { 
-		String jpql = "delete from Place";
-		em.createQuery(jpql).executeUpdate();
-	}
-	 
 	public long getPlaceCount() {
 		String jpql = "select count(p.placeId) from Place p";
 		Query query =em.createQuery(jpql);
 		return (long)query.getSingleResult();
 	} 
 	 
-	public Page<Place> placeSelect(String keyword, int curPage){
+	public Page<Place> placeSelect(String userId, String keyword, int curPage){
 		 int listCnt = (int)getPlaceCount();
 		 Paging pagingVo = new Paging(listCnt, curPage);
 		 Pageable pageable = PageRequest.of(curPage-1, pagingVo.getPageSize());
-		 return placeRepository.findByKeyword(keyword, pageable);
+		 return placeRepository.findByKeywordAndUserId(keyword, userId, pageable);
 	}
+
 }

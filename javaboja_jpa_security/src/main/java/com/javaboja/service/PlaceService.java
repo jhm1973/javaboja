@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 import com.javaboja.dao.HistoryDao;
 import com.javaboja.dao.PlaceDao;
+import com.javaboja.repository.PlaceRepository;
 import com.javaboja.utils.HttpClientService;
 import com.javaboja.utils.JsonConverter;
 import com.javaboja.vo.Place;
@@ -30,12 +31,14 @@ public class PlaceService {
 	@Autowired
 	HttpClientService hcs;
 	@Autowired
+	PlaceRepository pr;
+	@Autowired
 	JsonConverter jc;
 	
 	@Transactional
 	public Page<Place> placeSearchService(String userId, String keyword, String url, String pageSize, String kakao_token, int curPage, boolean realSearch) {
 		if(realSearch) {
-			placeDao.placeDelete();
+			pr.deleteAllByUserId(userId);
 			String httpResponse = ""; 
 			String is_end = "";
 			List<JSONArray> jsonArraylist = new ArrayList<>();
@@ -47,9 +50,9 @@ public class PlaceService {
 				if(is_end.equals("true")) break;
 				page++;
 			}
-			placeDao.placeInsert(keyword, jsonArraylist);
+			placeDao.placeInsert(userId, keyword, jsonArraylist);
 			historyDao.historyInsert(keyword, userId);
 		}
-		return placeDao.placeSelect(keyword, curPage);
+		return placeDao.placeSelect(userId, keyword, curPage);
 	}
 }
