@@ -88,3 +88,79 @@ div.greenTable {
 	text-decoration:none;
 	color : black;
 }
+body{
+      overflow:hidden;
+   }
+   a{
+      cursor: pointer;
+   }
+   #wrapper{
+      position: relative;
+      height : 100%;
+   }
+   #nav{
+      position: absolute;
+      border : 1px solid red;
+      width : 20%;
+      background-color: #007acc;
+      height : 3000px;
+      color : white;
+   }
+   #nav input{
+      color : black;
+   }
+   #main{
+      position: absolute;
+      border : 1px solid blue;
+      width : 80%;
+      left : 20%;
+      height : 100%;
+   }
+   #paging_button{
+      position: absolute;
+      left : 30%;
+      display: none;
+   }
+   #search_result{
+      display: none;
+   }
+   #history_result{
+      display: none;
+   }
+   #search_detail{
+      position: relative;
+      border: 1px solid green;
+      display: none;
+   }
+   #history_result{
+      display: none;
+   }
+   #popular_result{
+      display: none;
+   }
+   #logout_nav{
+      margin-bottom : 50px;
+      border:1px solid red;
+   }
+   #search_nav{
+      margin-bottom : 50px;
+   }
+   #history, #popular{
+      cursor: pointer;
+   }
+   /*맵입력*/
+
+
+#title{
+	border : 1px solid red;
+	font-size: 40px;
+	font-weight:bold;
+	text-align: center;
+	margin : 0 auto;
+	margin-bottom : 20px;
+}
+#user_info{
+	border: 1px solid red;
+	font-size: 20px;
+	margin-bottom : 5px;
+}

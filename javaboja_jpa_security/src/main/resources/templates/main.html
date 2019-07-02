@@ -10,66 +10,78 @@
 <script src="/js/jquery/jquery-3.4.1.min.js"></script>
 <script src=/js/main/main.js></script>
 <style>
-	body{
-		overflow:hidden;
-	}
-	a{
-		cursor: pointer;
-	}
-	#wrapper{
-		position: relative;
-		height : 100%;
-	}
-	#nav{
-		position: absolute;
-		border : 1px solid red;
-		width : 20%;
-		background-color: #007acc;
-		height : 3000px;
-		color : white;
-	}
-	#nav input{
-		color : black;
-	}
-	#main{
-		position: absolute;
-		border : 1px solid blue;
-		width : 80%;
-		left : 20%;
-		height : 100%;
-	}
-	#paging_button{
-		position: absolute;
-		left : 30%;
-		display: none;
-	}
-	#search_result{
-		display: none;
-	}
-	#history_result{
-		display: none;
-	}
-	#search_detail{
-		position: relative;
-		border: 1px solid green;
-		display: none;
-	}
-	#history_result{
-		display: none;
-	}
-	#popular_result{
-		display: none;
-	}
-	#logout_nav{
-		margin-bottom : 50px;
-	}
-	#search_nav{
-		margin-bottom : 50px;
-	}
-	#history, #popular{
-		cursor: pointer;
-	}
-	/*맵입력*/
+   body{
+      overflow:hidden;
+   }
+   a{
+      cursor: pointer;
+   }
+   #wrapper{
+      position: relative;
+      height : 100%;
+   }
+   #nav{
+      position: absolute;
+      border : 1px solid red;
+      width : 20%;
+      background-color: #007acc;
+      height : 3000px;
+      color : white;
+   }
+   #nav input{
+      color : black;
+   }
+   #main{
+      position: absolute;
+      border : 1px solid blue;
+      width : 80%;
+      left : 20%;
+      height : 100%;
+   }
+   #paging_button{
+      position: absolute;
+      left : 30%;
+      display: none;
+   }
+   #search_result{
+      display: none;
+   }
+   #history_result{
+      display: none;
+   }
+   #search_detail{
+      position: relative;
+      border: 1px solid green;
+      display: none;
+   }
+   #history_result{
+      display: none;
+   }
+   #popular_result{
+      display: none;
+   }
+   #logout_nav{
+      margin-bottom : 50px;
+      border:1px solid red;
+   }
+   #search_nav{
+      margin-bottom : 50px;
+   }
+   #history, #popular{
+      cursor: pointer;
+      display: block;
+      padding: 16px;
+      text-align: center;
+      border : 1px solid #007acc;
+      background-color: white;
+      color: black;
+      font-size: 20px;
+   }
+   #history:hover, #popular:hover{
+      background-color: #e6eeff;
+ 	  color: black;
+   }
+   /*맵입력*/
 
 #kk_map {
 width: 700px;
@@ -101,106 +113,154 @@ margin-top: 6%;
 .kk_info .kk_img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: visible;}
 .kk_info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
 .kk_info .kk_link {color: #5085BB;}
+#title{
+	border : 1px solid red;
+	font-size: 40px;
+	font-weight:bold;
+	text-align: center;
+	margin : 0 auto;
+	margin-bottom : 20px;
+}
+#user_info{
+	border: 1px solid red;
+	font-size: 20px;
+	margin-bottom : 5px;
+}
+.button {
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 223px;
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+.button4:hover {background-color: #e7e7e7;}
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#search_go{
+	background-color: white;
+	width : 60px;
+}
+#search_val{
+	width: 200px;
+}
 </style>
 </head>
 
 <body>
-	<div id = "wrapper">
-			<!--네비게이터-->		
-			<div id = "nav">
-				<div id=""></div>
-				<div id="logout_nav">
-					<form class="form-signin" th:action="@{/logout}" method="post">
-			    		<input type="submit" value="로그아웃">
-			   		</form>
-				</div>
-				<div id="search_nav">
-					 검색
-				   	<input type="text" id="search_val">
-				   	<input type="button" id="search_go" value="검색">
-				   	<input type="hidden" id="curPage">
-				    <input type="hidden" id="totalPage">
-				    <input type="hidden" id="page_info">
-				    <input type="hidden" id="keyword">
-				</div>
-				<div id="history">
-					내 검색 히스토리
-				</div>
-				<div id="popular">
-					인기 키워드 목록
-				</div>
-			</div>
-			
-			<!--메인-->
-			<div id = "main">
-				<!--검색 결과 리스트-->
-				<div id="search_result">
-					<div class="divTable greenTable">
-						<div class="divTableHeading">
-							<div class="divTableRow">
-								<div class="divTableHead">검색 결과</div>
-							</div>
-						</div>
-					</div>
-			   	</div>
-			   	
-			   	<!--검색 결과 상세 정보-->
-			   	<div id="search_detail">
-			   	</div>
-			   	
-			   	<!--내 검색 히스토리-->
-		 	  	<div id="history_result">
-		 	  		<div class="divTable greenTable">
-						<div class="divTableHeading">
-							<div class="divTableRow">
-								<div class="divTableHead">NO</div>
-								<div class="divTableHead">검색 키워드</div>
-								<div class="divTableHead">검색 일자</div>
-							</div>
-						</div>
-					</div>
-		 	  	</div>
-		 	  	
-		 	  	<!--인기 키워드 목록-->
-		 	  	<div id="popular_result">
-		 	  		<div class="divTable greenTable">
-						<div class="divTableHeading">
-							<div class="divTableRow">
-								<div class="divTableHead">NO</div>
-								<div class="divTableHead">인기 검색 키워드</div>
-								<div class="divTableHead">총 검색 횟수</div>
-							</div>
-						</div>
-					</div>
-		 	  	</div>
-		 	  	
-			   	<!--페이징 버튼-->
-			   	<div id="paging_button">
-			   	 	<ul class="pagination">
-				        <li id="first_page">
-				            <a onclick="" aria-label="First">
-				                <span aria-hidden="true">First</span>
-				            </a>
-				        </li>
-				        <li id="pre_page">
-				            <a onclick="" aria-label="Previous">
-				                <span aria-hidden="true">&lt;</span>
-				            </a>
-				        </li>
-				        
-				        <li id="next_page">
-				            <a onclick="" aria-label="Next">
-				                <span aria-hidden="true">&gt;</span>
-				            </a>
-				        </li>
-				        <li id="last_page">
-				            <a onclick="" aria-label="Last">
-				                <span aria-hidden="true">Last</span>
-				            </a>
-				        </li>
-				    </ul>
-		 	  	</div>
-			</div>
-	</div>
+   <div id = "wrapper">
+         <!--네비게이터-->      
+         <div id = "nav">
+            <div id="title">PLACE SEARCH</div>
+           	<div id="user_info">안녕하세요. <span id="user_info_look"></span> 님</div>
+            <div id="logout_nav">
+               <form class="form-signOut" th:action="@{/logout}" method="post">
+                   <button class="button button4" type="submit">로그아웃</button>
+                  </form>
+            </div>
+            <div id="search_nav">
+                	키워드를 검색하세요.   
+                	<i class="down"></i>
+                  <input type="text" id="search_val">
+                  <input type="button" id="search_go" value="검색">
+                  <input type="hidden" id="curPage">
+                <input type="hidden" id="totalPage">
+                <input type="hidden" id="page_info">
+                <input type="hidden" id="keyword">
+            </div>
+            <div id="history">
+               	내 검색 히스토리
+            </div>
+            <div id="popular">
+            	   인기 키워드 목록
+            </div>
+         </div>
+         
+         <!--메인-->
+         <div id = "main">
+ 
+            <!--검색 결과 리스트-->
+            <div id="search_result">
+               <div class="divTable greenTable">
+                  <div class="divTableHeading">
+                     <div class="divTableRow">
+                        <div class="divTableHead">검색 결과</div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+               
+               <!--검색 결과 상세 정보-->
+               <div id="search_detail">
+               </div>
+               
+               <!--내 검색 히스토리-->
+               <div id="history_result">
+                  <div class="divTable greenTable">
+                  <div class="divTableHeading">
+                     <div class="divTableRow">
+                        <div class="divTableHead">NO</div>
+                        <div class="divTableHead">검색 키워드</div>
+                        <div class="divTableHead">검색 일자</div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+               
+               <!--인기 키워드 목록-->
+               <div id="popular_result">
+                  <div class="divTable greenTable">
+                  <div class="divTableHeading">
+                     <div class="divTableRow">
+                        <div class="divTableHead">NO</div>
+                        <div class="divTableHead">인기 검색 키워드</div>
+                        <div class="divTableHead">총 검색 횟수</div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+               
+               <!--페이징 버튼-->
+               <div id="paging_button">
+                   <ul class="pagination">
+                    <li id="first_page">
+                        <a onclick="" aria-label="First">
+                            <span aria-hidden="true">First</span>
+                        </a>
+                    </li>
+                    <li id="pre_page">
+                        <a onclick="" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    
+                    <li id="next_page">
+                        <a onclick="" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                    <li id="last_page">
+                        <a onclick="" aria-label="Last">
+                            <span aria-hidden="true">Last</span>
+                        </a>
+                    </li>
+                </ul>
+               </div>
+         </div>
+   </div>
 </body>
 </html>

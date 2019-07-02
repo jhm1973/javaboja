@@ -1,9 +1,18 @@
+
+
+
 //요청 페이지 크기
 var pageSize=10;
 //요청 url
 var url="https://dapi.kakao.com/v2/local/search/keyword.json?";
 $(document).ready(function(){
-	
+	$(window).on("popstate",function(e){
+		console.log(e.originalEvent.state);
+		state=e.originalEvent.state;
+	});
+	/*window.addEventListener('popstate', function () {
+	    console.log('popstate', history.state);
+	  });*/
 	display_none_set = function() {
 		$("#search_detail").css("display","none");
 		$("#history_result").css("display","none");
@@ -68,8 +77,6 @@ $(document).ready(function(){
 		var paging_num=Math.floor(curPage/(pageSize+1))*pageSize+1;
 		var resultData = data.content;
 		var total_page=Math.ceil(total_count/pageSize);
-		console.log("현재 페이지 : "+curPage);
-		console.log("현재 페이지 : "+total_page);
 		$("#curPage").val(curPage);
 		$("#totalPage").val(total_page);
 		//start, end page 번호 추출
@@ -94,7 +101,39 @@ $(document).ready(function(){
 		}
 	}
 
+	//type : search, searchPaging, detail, history, historyPaging, popular
+	pushStateFnc = function(type){
+		
+		switch(type){
+		case "search":
+			
+			break;
+		case "searchPaging":
+			
+			break;
+		case "detail":
+			
+			break;
+		case "history":
+			
+			break;
+		case "historyPaging":
+			
+			break;
+		case "popular":
+			history.pushState("state","","");
+			if(state==undefined){
+				history.pushState("state","","");
+			}
+			break;
+		}
+		history.pushState("state","","");
+		if(state==undefined){
+			history.pushState("state","","");
+		}
+	}
 	placeDetail = function(id, keyword, url, pageSize, curPage){
+		history.pushState(curPage,"","Detail");
 		display_none_set();
 		$.get("/main/place/detail",
 			{ id : id,
@@ -159,14 +198,12 @@ $(document).ready(function(){
 					closeOverlay = function(){
 						overlay.setMap(null);     
 					}
-					var state = {'page_id':1,'user_id':5};
-					var title = "";
-					history.pushState(state,title);
 			}
 			
 		);
+		
 	}
-
+	
 	pageMove = function(pageNum){
 		//조회수 증가 여부
 		var realSearch=false;
@@ -176,6 +213,7 @@ $(document).ready(function(){
 	}
 	
 	ajaxGetSearch = function(keyword, curPage, url, realSearch){
+		history.pushState(curPage,"","search"+curPage);
 		$.get("/main/place/search",
 			{ keyword : keyword,
 			  curPage : curPage,
@@ -185,7 +223,6 @@ $(document).ready(function(){
 			},
 			function(data, status){
 				var jsonData = JSON.parse(data);
-				console.log(jsonData.documents);
 				var paging_data = new Object();
 				paging_data.totalElements = jsonData.meta.pageable_count;
 				paging_data.size = pageSize;
@@ -200,9 +237,6 @@ $(document).ready(function(){
 				var startPage = pagingObject.startPage;
 				var endPage = pagingObject.endPage;
 				var result_data = pagingObject.resultData;
-				console.log("startPage : "+startPage);
-				console.log("endPage : "+endPage);
-				console.log("result_data : "+result_data);
 				var page_text='';
 				for(var i=startPage;i<=endPage;i++){
 					if(i==curPage){
@@ -215,7 +249,6 @@ $(document).ready(function(){
 				
 				var result_text='';
 				$.each(result_data,function(key,value){
-					console.log("key : "+key+", value : "+value.place_name+", id : "+value.id);
 					result_text=result_text+"<div class='divTableBody'>"+
 								"<div class='divTableRow'>"+
 								"<div class='divTableCell'>"+
@@ -228,17 +261,12 @@ $(document).ready(function(){
 				$(".divTableHeading").after(result_text);
 				$("#paging_button").css("display","inline");
 				$("#search_result").css("display","inline");
-				var state = {'page_id':curPage,'user_id':5};
-				var title = "";
-				console.log(state);
-				history.pushState(state,null,"");	
-				
 			}
 		);
 	}
 	
 	ajaxGetPopular = function(){
-			
+		history.pushState(curPage,"","popular");
 			$.get("/main/popular",
 			function(data,status){
 				if(data.totalElements==0){
@@ -255,7 +283,6 @@ $(document).ready(function(){
 					$(item).remove();
 				})
 				$.each(data,function(key,value){
-					console.log("key : "+key+", value : "+value);
 					result_text=result_text+"<div class='divTableBody'>"+
 												"<div class='divTableRow'>"+
 													"<div class='divTableCell'>"+(Number(key)+1)+"</div>"+
@@ -271,6 +298,7 @@ $(document).ready(function(){
 	}
 	
 	ajax_get_history = function(curPage){
+		history.pushState(curPage,"","histoy"+curPage);
 		$("#page_info").val("history");
 		$.get("/main/history",
 				{curPage : curPage},
@@ -296,7 +324,6 @@ $(document).ready(function(){
 				
 				var result_text='';
 				$.each(result_data,function(key,value){
-					console.log("key : "+key+", value : "+value.place_name);
 					result_text=result_text+"<div class='divTableBody'>"+
 												"<div class='divTableRow'>"+
 													"<div class='divTableCell'>"+(Number(Number(pageSize)*(Number(curPage)-1))+(Number(key)+1))+"</div>"+
@@ -314,6 +341,7 @@ $(document).ready(function(){
 	}
 	
 	$("#search_go").on("click",function(){
+		display_none_set();
 		//검색 키워드
 		var keyword=$("#search_val").val();
 		$("#keyword").val(keyword);
@@ -344,10 +372,5 @@ $(document).ready(function(){
 	$("#popular").on("click",function(){
 			ajaxGetPopular();
 	});
-	
-	window.onpopstate = function(event) {  //뒤로가기 이벤트를 캐치합니다.
-		  console.log('뒤로가기 체크'); 
-
-	}
 	
 });
