@@ -8681,3 +8681,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2019-07-02 18:07:01.813 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
 2019-07-02 18:07:01.813 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
 2019-07-02 18:07:01.934 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.934 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.935 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 18:07:02.060 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 18:07:02.060 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
