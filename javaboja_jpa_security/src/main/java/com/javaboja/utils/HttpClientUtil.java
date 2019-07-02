@@ -11,11 +11,11 @@ import okhttp3.Request;
 
 @Component
 @Slf4j
-public class HttpClientService{
+public class HttpClientUtil{
 
 	public String httpClientGet(String keyword, String url, String pageSize, int page, String kakaoToken) {
 		log.info("url : "+url+"query="+keyword);
-		JsonConverter jsonConverter = new JsonConverter();
+		//JsonConverterUtil jsonConverter = new JsonConverterUtil();
 		String responseBody = "";
 		OkHttpClient client = new OkHttpClient.Builder()
 				.connectTimeout(60, TimeUnit.MINUTES)
@@ -36,7 +36,7 @@ public class HttpClientService{
 	        		.build();
 			responseBody = client.newCall(request).execute().body().string();
 			
-			jsonConverter.StringToJsonObject(responseBody,"meta");
+			//jsonConverter.StringToJsonObject(responseBody,"meta");
 			
 		}catch(Exception e) {
 			e.printStackTrace();

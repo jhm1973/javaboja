@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -15,9 +16,11 @@ import lombok.Getter;
 @Entity
 @Table(name="Place")
 public class Place {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int placeId;
+	private String placeCode;
 	private String addressName;
 	private String phone;
 	private String placeName;
@@ -25,7 +28,19 @@ public class Place {
 	private String roadAddressName;
 	private String latitude;
 	private String longitude;
-	private String keyword;
+	//private String keyword;
 	
 	private String userId;
+//	@Id
+//	private String placeId;
+//	private String addressName;
+//	private String phone;
+//	private String placeName;
+//	private String placeUrl;
+//	private String roadAddressName;
+//	private String latitude;
+//	private String longitude;
+//	private String keyword;
+//	
+//	private String userId;
 }

@@ -17,8 +17,8 @@ import com.javaboja.repository.PlaceRepository;
 import com.javaboja.repository.UserRepository;
 import com.javaboja.service.HistoryService;
 import com.javaboja.service.PlaceService;
-import com.javaboja.utils.HttpClientService;
-import com.javaboja.utils.JsonConverter;
+import com.javaboja.utils.HttpClientUtil;
+import com.javaboja.utils.JsonConverterUtil;
 import com.javaboja.vo.History;
 import com.javaboja.vo.Place;
 import lombok.extern.slf4j.Slf4j;
@@ -41,26 +41,42 @@ public class MainController {
 		return "main";
 	}
 	
+//	@GetMapping("/main/place/search")
+//	@ResponseBody 
+//	public Page<Place> javabojaSearch(@RequestParam String keyword, 
+// 									  @RequestParam String url,
+//				  					  @RequestParam String pageSize,
+//				  					  @RequestParam int curPage, 
+//				  					  @RequestParam boolean realSearch,
+//				  					  Principal principal) 
+//	{ 
+//		return placeService.placeSearchService(principal.getName(), keyword, url, pageSize, kakao_token, curPage, realSearch);
+//	}
+	
 	@GetMapping("/main/place/search")
 	@ResponseBody 
-	public Page<Place> javabojaSearch(@RequestParam String keyword, 
-									  @RequestParam String url,
-				  					  @RequestParam String pageSize,
-				  					  @RequestParam int curPage, 
-				  					  @RequestParam boolean realSearch,
-				  					  Principal principal) 
+	public String javabojaSearch(@RequestParam String keyword, 
+							     @RequestParam String url,
+		  					     @RequestParam String pageSize,
+		  					     @RequestParam int curPage, 
+		  					     @RequestParam boolean realSearch,
+				  				 Principal principal) 
 	{ 
 		return placeService.placeSearchService(principal.getName(), keyword, url, pageSize, kakao_token, curPage, realSearch);
-	} 
-	 
+	}
 	
 	@GetMapping("/main/place/detail")
 	@ResponseBody
-	public Place javabojaSearchDetail(@RequestParam String id,
-							  		Principal principal)
+	public String javabojaSearchDetail(@RequestParam String id,
+									  @RequestParam String keyword, 
+									  @RequestParam String url,
+									  @RequestParam String pageSize,
+									  @RequestParam int curPage, 
+							  		  Principal principal)
 	{
-		Place placeVo = placeRepository.findByPlaceId(id);
-		return placeVo;
+		//Place place = placeRepository.findByPlaceId(id);
+		
+		return placeService.placeDetail(id, keyword, url, pageSize, curPage, kakao_token);
 	}
 	
 	@GetMapping("/main/history")

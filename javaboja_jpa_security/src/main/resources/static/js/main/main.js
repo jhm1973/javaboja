@@ -22,20 +22,27 @@ $(document).ready(function(){
 		//페이지 정보
 		var page_info=$("#page_info").val();
 		
-		if(curPage==1){
-			alert("첫번째 페이지 입니다.");
-			return;
-		}if(curPage==lastpage){
-			alert("마지막 페이지 입니다.");
-			return;
+		if(type=="first_page" || type=="pre_page"){
+			if(curPage==1){
+				alert("첫번째 페이지 입니다.");
+				return;
+			}
+		}
+		if(type=="next_page" || type=="last_page"){
+			if(curPage==lastpage){
+				alert("마지막 페이지 입니다.");
+				return;
+			}
 		}
 		
 		if(page_info=="search"){
 			if(type=="first_page"){
+				
 				ajaxGetSearch(keyword, 1, url, false);
 			}else if(type=="pre_page"){
 				ajaxGetSearch(keyword, Number(curPage)-1, url, false);
 			}else if(type=="next_page"){
+				
 				ajaxGetSearch(keyword, Number(curPage)+1, url, false);
 			}else if(type=="last_page"){
 				ajaxGetSearch(keyword, lastpage, url, false);
@@ -61,6 +68,8 @@ $(document).ready(function(){
 		var paging_num=Math.floor(curPage/(pageSize+1))*pageSize+1;
 		var resultData = data.content;
 		var total_page=Math.ceil(total_count/pageSize);
+		console.log("현재 페이지 : "+curPage);
+		console.log("현재 페이지 : "+total_page);
 		$("#curPage").val(curPage);
 		$("#totalPage").val(total_page);
 		//start, end page 번호 추출
@@ -85,30 +94,35 @@ $(document).ready(function(){
 		}
 	}
 
-	placeDetail = function(id){
+	placeDetail = function(id, keyword, url, pageSize, curPage){
 		display_none_set();
 		$.get("/main/place/detail",
-			{ id : id
+			{ id : id,
+			  keyword : keyword,
+			  url : url,
+			  pageSize : pageSize,
+			  curPage : curPage
 			},
 			function(data,status){
-					var detail_text='<div> 이름 : '+data.placeName+'</div>'+
-					'<div> 구주소 : '+data.addressName+'</div>'+
-					'<div> 도로명주소 : '+data.roadAddressName+'</div>'+
-					'<div> URL : '+data.placeUrl+'</div>'+
+					data = JSON.parse(data);
+					var detail_text='<div> 이름 : '+data.place_name+'</div>'+
+					'<div> 구주소 : '+data.address_name+'</div>'+
+					'<div> 도로명주소 : '+data.roadAddress_name+'</div>'+
+					'<div> URL : '+data.place_url+'</div>'+
 					'<div> 전화번호 : '+data.phone+'</div>'+
-					'<a href="https://map.kakao.com/link/map/'+data.placeId+'">'+'지도 바로가기</a>'+
+					'<a href="https://map.kakao.com/link/map/'+data.id+'">'+'지도 바로가기</a>'+
 					'<div id="kk_map"></div>';
 					$("#search_detail").html(detail_text);
 					$("#search_detail").css("display","inline");
 					var mapContainer = document.getElementById('kk_map'), // 지도의 중심좌표
 				    mapOption = { 
-				        center: new kakao.maps.LatLng(data.latitude, data.longitude), // 지도의 중심좌표
+				        center: new kakao.maps.LatLng(data.y, data.x), // 지도의 중심좌표
 				        level: 3 // 지도의 확대 레벨
 				    }; 
 			
 					var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 					// 마커를 표시할 위치입니다 
-					var position =  new kakao.maps.LatLng(data.latitude, data.longitude);
+					var position =  new kakao.maps.LatLng(data.y, data.x);
 			
 					// 마커를 생성합니다
 					var marker = new kakao.maps.Marker({
@@ -119,14 +133,14 @@ $(document).ready(function(){
 					marker.setMap(map);
 					var content = '<div class="kk_wrap">'+
 			        			  	'<div class="kk_info">'+
-			        			  		'<div class="kk_title">'+data.placeName+
+			        			  		'<div class="kk_title">'+data.place_name+
 			        			  			'<div class="kk_close" onclick="closeOverlay()" title="닫기"></div>'+
 			        			  		'</div>'+
 			        			  		'<div class="kk_body">'+
 			        			  			'<div class="kk_img"> <img src="http://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">'+
 			        			  			'</div>'+
 			        			  			'<div class="kk_desc">'+
-			        			  				'<div class="kk_ellipsis">'+data.roadAddressName+'</div>'+
+			        			  				'<div class="kk_ellipsis">'+data.road_address_name+'</div>'+
 			        			  			'</div>'+
 			        			  		'</div>'+
 			        			  	'</div>'+
@@ -171,18 +185,24 @@ $(document).ready(function(){
 			},
 			function(data, status){
 				var jsonData = JSON.parse(data);
-				var pging_data = new Object();
+				console.log(jsonData.documents);
+				var paging_data = new Object();
 				paging_data.totalElements = jsonData.meta.pageable_count;
 				paging_data.size = pageSize;
 				paging_data.number = curPage-1;
+				paging_data.content = jsonData.documents;
 				if(jsonData.meta.pageable_count==0){
 					alert("검색 결과가 없습니다.");
 					return;
 				}
-				var pagingObject = ajax_paging(pging_data);
+				
+				var pagingObject = ajax_paging(paging_data);
 				var startPage = pagingObject.startPage;
 				var endPage = pagingObject.endPage;
 				var result_data = pagingObject.resultData;
+				console.log("startPage : "+startPage);
+				console.log("endPage : "+endPage);
+				console.log("result_data : "+result_data);
 				var page_text='';
 				for(var i=startPage;i<=endPage;i++){
 					if(i==curPage){
@@ -192,13 +212,14 @@ $(document).ready(function(){
 					}
 					
 				}
+				
 				var result_text='';
 				$.each(result_data,function(key,value){
-					console.log("key : "+key+", value : "+value.place_name+", id : "+value.placeId);
+					console.log("key : "+key+", value : "+value.place_name+", id : "+value.id);
 					result_text=result_text+"<div class='divTableBody'>"+
 								"<div class='divTableRow'>"+
 								"<div class='divTableCell'>"+
-								"<a onclick='placeDetail("+value.placeId+");'>"+value.placeName+"</a>"+
+								"<a onclick='placeDetail("+value.id+",\""+keyword+"\",\""+url+"\",\""+pageSize+"\",\""+curPage+"\");'>"+value.place_name+"</a>"+
 								"</div>"+
 								"</div>"+
 								"</div>";		
@@ -295,6 +316,7 @@ $(document).ready(function(){
 	$("#search_go").on("click",function(){
 		//검색 키워드
 		var keyword=$("#search_val").val();
+		$("#keyword").val(keyword);
 		if(keyword=='' || keyword==null){
 			alert("키워드를 입력해 주세요");
 			return;

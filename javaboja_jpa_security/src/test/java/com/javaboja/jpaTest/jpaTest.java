@@ -1,10 +1,11 @@
-package com.javaboja.controllerTest;
+package com.javaboja.jpaTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -32,8 +33,6 @@ import com.javaboja.vo.Place;
 @DataJpaTest
 public class jpaTest {
 
-//	@Autowired
-//	private TestEntityManager em;
 	@Autowired
 	private EntityManager em;
 	@Autowired
@@ -84,7 +83,7 @@ public class jpaTest {
 //		}
 //		pr.saveAll(list);
 		
-		//밑에가 약간 더 빠름
+		//managerEntity 사용 시 더 빠름
 //		for(int i=0; i<10000; i++) {
 //			Place place = new Place();
 //			place.setAddressName("주소");
@@ -112,13 +111,70 @@ public class jpaTest {
 //		query.setParameter("user_id", "javaboja1");
 //		query.setParameter("keyword", "테스트");
 //	}
+//	@Test
+//	public void placeSelect() {
+//		
+//		for(int i=0; i<15; i++) {
+//			Place place = new Place();
+//			place.setAddressName("주소");
+//			place.setKeyword("키워드");
+//			place.setLatitude("위도");
+//			place.setLongitude("경도");
+//			place.setPhone("번호");
+//			place.setPlaceName("장소명");
+//			place.setPlaceUrl("URL");
+//			place.setRoadAddressName("도로명주소");
+//			place.setUserId("javaboja1");
+//
+//			em.persist(place);
+//		}
+//		assertEquals(15, pr.count());
+//		Pageable pageable = PageRequest.of(0, 10);
+//		Page<Place> list = pr.findByKeywordAndUserId("키워드", "javaboja1", pageable);
+//		for(int i=0;i<list.getSize();i++) {
+//			System.out.println("number : "+list.getNumber());
+//			System.out.println("size : "+list.getSize());
+//			System.out.println("totalElement : "+list.getTotalElements());
+//			for(int j=0;j<list.getContent().size();j++) {
+//				System.out.println(list.getContent().get(j).toString());
+//			}
+//		}
+//		System.out.println();
+//	}
+	
+	//검색할 때 마다 모두 DB에 저장한 뒤 추후 검색 시 select로 데이터 확인 후 insert하는 방법 처리 시간 확인
 	@Test
-	public void placeSelect() {
-		
-		for(int i=0; i<15; i++) {
+	public void test1() {
+		//데이터 등록
+		for(int i=0; i<50000; i++) {
 			Place place = new Place();
 			place.setAddressName("주소");
-			place.setKeyword("키워드");
+			place.setLatitude("위도");
+			place.setLongitude("경도");
+			place.setPhone("번호");
+			place.setPlaceName("장소명");
+			place.setPlaceUrl("URL");
+			place.setRoadAddressName("도로명주소");
+			if(i>10000) {
+				place.setUserId("javaboja5");
+			}else if(i>20000) {
+				place.setUserId("javaboja4");
+			}else if(i>30000) {
+				place.setUserId("javaboja3");
+			}else if(i>40000) {
+				place.setUserId("javaboja2");
+			}else{
+				place.setUserId("javaboja1");
+			}
+			
+			place.setPlaceCode(""+i);
+			em.persist(place);
+		}
+		//test2();
+		pr.deleteAllByUserId("javaboja1");
+		for(int i=0; i<10; i++) {
+			Place place = new Place();
+			place.setAddressName("주소");
 			place.setLatitude("위도");
 			place.setLongitude("경도");
 			place.setPhone("번호");
@@ -126,18 +182,33 @@ public class jpaTest {
 			place.setPlaceUrl("URL");
 			place.setRoadAddressName("도로명주소");
 			place.setUserId("javaboja1");
-
+			place.setPlaceCode(""+i);
 			em.persist(place);
 		}
-		assertEquals(15, pr.count());
-		Paging pagingVo = new Paging(15, 1);
-		Pageable pageable = PageRequest.of(0, 10);
-		Page<Place> list = pr.findByKeywordAndUserId("키워드", "javaboja1", pageable);
-		for(int i=0;i<list.getSize();i++) {
-			System.out.println("number : "+list.getNumber());
-			System.out.println("size : "+list.getSize());
-			System.out.println("totalElement : "+list.getTotalElements());
+//		pr.findByPlaceCodeAndUserId("2342", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("223", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("12334", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("6654", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("5567", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("24", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("545", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("22222", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("34455", "javaboja1");
+//		pr.findByPlaceCodeAndUserId("5678", "javaboja1");
+		
+	}
+	
+	//@Test
+	public void test2() {
+		//0.012ms
+		for(int i=0;i<10;i++) {
+			pr.findByPlaceCodeAndUserId("45434", "javaboja1");
 		}
-		System.out.println();
+	}
+	
+	//@Test
+	public void test3() {
+		//
+		pr.deleteAllByUserId("javaboja1");
 	}
 }

@@ -15,11 +15,13 @@ import com.javaboja.vo.Place;
 public interface PlaceRepository extends JpaRepository<Place, String>{
 
 	public Place findByPlaceId(String placeId);
-	//public Page<Place> findAll(Pageable pageable);
-	public Page<Place> findByKeywordAndUserId(String keyword, String userId, Pageable pageable);
+	//public Page<Place> findByKeywordAndUserId(String keyword, String userId, Pageable pageable);
 	
 	@Transactional
 	@Modifying
 	@Query("delete from Place p where p.userId = :userId")
 	public void deleteAllByUserId(@Param("userId") String userId);
+	
+	public Place findByPlaceCodeAndUserId(String placeCode, String UserId);
+	public int countByPlaceCodeAndUserId(String placeCode, String UserId);
 }

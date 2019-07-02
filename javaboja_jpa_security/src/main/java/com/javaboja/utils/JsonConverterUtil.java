@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
-public class JsonConverter {
+public class JsonConverterUtil {
 
 	public JSONArray stringToJsonArray(String data, String searchType) {
 		JSONParser jp = null;
