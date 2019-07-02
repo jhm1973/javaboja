@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$("#popular_result").css("display","none");
 	}
 
-	page_click_fn = function(type){
+	pageClickFn = function(type){
 		//검색 키워드
 		var keyword=$("#search_val").val();
 		//현재 페이지
@@ -32,13 +32,13 @@ $(document).ready(function(){
 		
 		if(page_info=="search"){
 			if(type=="first_page"){
-				ajax_get_search(keyword, 1, url, false);
+				ajaxGetSearch(keyword, 1, url, false);
 			}else if(type=="pre_page"){
-				ajax_get_search(keyword, Number(curPage)-1, url, false);
+				ajaxGetSearch(keyword, Number(curPage)-1, url, false);
 			}else if(type=="next_page"){
-				ajax_get_search(keyword, Number(curPage)+1, url, false);
+				ajaxGetSearch(keyword, Number(curPage)+1, url, false);
 			}else if(type=="last_page"){
-				ajax_get_search(keyword, lastpage, url, false);
+				ajaxGetSearch(keyword, lastpage, url, false);
 			}
 		}else if(page_info=="history"){
 			if(type=="first_page"){
@@ -158,10 +158,10 @@ $(document).ready(function(){
 		var realSearch=false;
 		//검색 키워드
 		var keyword=$("#search_val").val();
-		ajax_get_search(keyword, pageNum, url, realSearch);
+		ajaxGetSearch(keyword, pageNum, url, realSearch);
 	}
 	
-	ajax_get_search = function(keyword, curPage, url, realSearch){
+	ajaxGetSearch = function(keyword, curPage, url, realSearch){
 		$.get("/main/place/search",
 			{ keyword : keyword,
 			  curPage : curPage,
@@ -170,12 +170,16 @@ $(document).ready(function(){
 			  realSearch : realSearch
 			},
 			function(data, status){
-				
-				if(data.totalElements==0){
+				var jsonData = JSON.parse(data);
+				var pging_data = new Object();
+				paging_data.totalElements = jsonData.meta.pageable_count;
+				paging_data.size = pageSize;
+				paging_data.number = curPage-1;
+				if(jsonData.meta.pageable_count==0){
 					alert("검색 결과가 없습니다.");
 					return;
 				}
-				var pagingObject = ajax_paging(data);
+				var pagingObject = ajax_paging(pging_data);
 				var startPage = pagingObject.startPage;
 				var endPage = pagingObject.endPage;
 				var result_data = pagingObject.resultData;
@@ -212,7 +216,7 @@ $(document).ready(function(){
 		);
 	}
 	
-	ajax_get_popular = function(){
+	ajaxGetPopular = function(){
 			
 			$.get("/main/popular",
 			function(data,status){
@@ -297,26 +301,26 @@ $(document).ready(function(){
 		}
 		//페이지 정보
 		$("#page_info").val("search");
-		ajax_get_search(keyword, 1, url, true);
+		ajaxGetSearch(keyword, 1, url, true);
 	});
 	
 	$("#first_page").on("click",function(){
-		page_click_fn($(this).attr("id"));
+		pageClickFn($(this).attr("id"));
 	});
 	$("#pre_page").on("click",function(){
-		page_click_fn($(this).attr("id"));
+		pageClickFn($(this).attr("id"));
 	});
 	$("#next_page").on("click",function(){
-		page_click_fn($(this).attr("id"));
+		pageClickFn($(this).attr("id"));
 	});
 	$("#last_page").on("click",function(){
-		page_click_fn($(this).attr("id"));
+		pageClickFn($(this).attr("id"));
 	});
 	$("#history").on("click",function(){
 		ajax_get_history(1);
 	});
 	$("#popular").on("click",function(){
-			ajax_get_popular();
+			ajaxGetPopular();
 	});
 	
 	window.onpopstate = function(event) {  //뒤로가기 이벤트를 캐치합니다.

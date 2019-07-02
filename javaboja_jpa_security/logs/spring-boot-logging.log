@@ -7593,3 +7593,1091 @@ Caused by: org.hibernate.QueryException: could not resolve property: user_id of:
 2019-07-02 05:30:08.595 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@55a561cf testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@60611244, testMethod = bulkInsert@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3b938003 testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7d70d1b1, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@9edfd32, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38bc8ab5, [ImportsContextCustomizer@6f3b5d16 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@87f383f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@612fc6eb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@b379bc6]; rollback [true]
 2019-07-02 05:30:09.266 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@55a561cf testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@60611244, testMethod = bulkInsert@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3b938003 testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7d70d1b1, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@9edfd32, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38bc8ab5, [ImportsContextCustomizer@6f3b5d16 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@87f383f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@612fc6eb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
 2019-07-02 05:30:09.273 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 14:52:46.649 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 58252 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 14:52:46.651 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-02 14:52:46.714 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-02 14:52:46.714 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-02 14:52:46.770 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 14:52:47.937 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 14:52:48.085 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135ms. Found 3 repository interfaces.
+2019-07-02 14:52:48.797 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1ce5eca8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-02 14:52:49.335 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-02 14:52:49.357 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-02 14:52:49.372 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-02 14:52:49.373 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-02 14:52:49.570 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-02 14:52:49.571 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2856 ms
+2019-07-02 14:52:49.847 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-02 14:52:50.010 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-02 14:52:50.208 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 14:52:50.300 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 14:52:50.304 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 14:52:50.521 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 14:52:50.737 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 14:52:51.829 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 14:52:51.906 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-02 14:52:52.411 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 14:52:52.880 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-02 14:52:52.880 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-02 14:52:52.881 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-02 14:52:52.881 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-02 14:52:52.881 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-02 14:52:52.881 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-02 14:52:52.881 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-02 14:52:52.920 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ae00ff9, org.springframework.security.web.context.SecurityContextPersistenceFilter@3dd209a4, org.springframework.security.web.header.HeaderWriterFilter@31f6997f, org.springframework.security.web.csrf.CsrfFilter@ed8ceec, org.springframework.security.web.authentication.logout.LogoutFilter@58f51b7b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d22352c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fbe767f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d9965bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5687c6dc, org.springframework.security.web.session.SessionManagementFilter@65a4b77b, org.springframework.security.web.access.ExceptionTranslationFilter@7a65a24c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72f2d31b]
+2019-07-02 14:52:54.588 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 14:52:54.634 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-02 14:52:54.938 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-02 14:52:54.969 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-02 14:52:54.972 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 8.914 seconds (JVM running for 10.696)
+2019-07-02 15:34:01.055 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-02 15:34:01.056 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-02 15:34:01.096 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 40 ms
+2019-07-02 15:34:08.806 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:10.594 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.596 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.598 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:10.716 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.717 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.718 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:10.839 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.841 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.841 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:10.964 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.965 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:10.965 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:11.097 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:11.098 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:19.481 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:19.611 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.612 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.613 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:19.734 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.735 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.736 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:19.856 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.857 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.858 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:19.975 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.976 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:19.977 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:20.093 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:20.094 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:30.804 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버문화재단
+2019-07-02 15:34:30.922 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:30.923 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:47.208 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:47.334 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.335 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.336 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:47.458 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.459 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.460 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:47.580 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.580 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.581 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:47.712 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.714 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:34:47.714 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:34:47.837 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:34:47.838 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:39:18.808 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:39:18.943 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:18.944 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:18.945 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:39:19.064 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:19.065 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:19.065 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:39:19.176 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:19.177 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:19.178 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:39:19.305 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:19.306 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:39:19.307 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=네이버
+2019-07-02 15:39:19.423 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:39:19.424 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:17.710 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:17.831 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:17.831 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:17.832 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:17.940 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:17.941 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:17.941 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:18.065 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:18.066 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:18.067 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:18.179 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:18.180 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:18.180 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:18.302 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:18.303 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:33.815 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:33.933 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:33.934 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:33.935 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.062 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.063 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.064 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.193 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.194 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.195 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.324 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.325 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.325 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.446 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:34.447 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:34.489 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.634 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.634 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.634 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.757 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.758 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.758 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.879 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.880 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.882 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:34.996 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.997 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:34.997 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.116 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:35.117 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:35.151 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.279 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.279 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.280 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.403 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.403 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.404 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.529 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.530 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.531 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.661 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.661 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.662 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.787 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:35.788 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:35.821 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:35.949 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.949 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:35.950 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:36.073 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.074 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.074 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:36.200 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.201 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.201 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:36.318 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.318 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.318 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:36.434 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:36.434 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:36.671 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:36.799 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.800 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.800 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:36.924 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.924 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:36.925 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.050 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.051 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.051 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.176 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.177 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.177 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.298 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:37.299 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:37.335 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.459 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.459 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.459 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.577 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.578 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.578 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.701 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.702 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.702 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.836 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.837 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:37.837 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:37.962 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:37.963 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:38.007 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.140 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.141 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.141 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.269 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.269 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.270 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.399 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.400 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.400 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.543 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.544 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.544 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.667 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:38.667 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:38.692 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.830 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.830 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.830 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:38.954 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.955 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:38.955 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.081 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.082 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.082 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.207 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.208 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.208 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.342 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:39.342 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:39.362 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.494 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.494 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.494 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.609 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.610 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.610 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.735 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.735 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.735 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.862 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.862 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:39.862 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:39.986 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:39.986 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:40.012 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.133 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.134 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.135 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.251 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.252 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.252 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.365 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.365 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.365 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.486 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.487 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.487 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.603 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:40.603 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:40.628 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.756 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.757 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.757 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:40.880 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.880 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:40.880 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.017 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.018 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.018 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.156 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.157 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.157 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.270 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:41.270 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:41.292 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.414 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.415 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.415 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.540 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.541 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.541 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.666 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.666 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.667 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.778 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.779 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:41.779 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:41.891 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:41.891 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:41.925 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.050 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.050 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.050 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.170 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.170 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.171 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.326 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.327 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.327 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.460 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.460 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.461 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.581 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:42.581 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:42.597 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.708 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.709 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.709 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.826 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.826 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.827 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:42.949 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.950 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:42.950 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.075 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.076 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.076 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.202 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:43.203 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:43.226 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.343 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.343 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.344 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.462 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.462 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.462 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.578 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.579 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.579 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.701 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.702 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.702 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.832 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:43.832 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:43.854 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:43.972 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.972 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:43.972 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.107 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.108 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.108 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.243 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.243 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.244 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.362 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.362 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.362 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.475 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:44.476 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:44.496 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.614 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.614 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.614 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.734 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.735 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.735 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.857 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.857 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.857 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:44.974 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.975 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:44.975 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.094 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:45.095 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:45.114 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.236 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.236 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.236 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.352 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.353 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.353 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.475 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.476 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.476 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.605 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.606 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.606 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.730 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:45.730 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:45.752 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.880 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.881 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.881 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:45.998 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.999 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:45.999 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.114 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.115 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.115 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.232 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.233 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.233 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.383 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:46.383 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:46.408 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.530 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.531 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.531 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.659 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.659 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.660 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.770 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.770 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.771 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:46.889 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.890 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:46.890 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.012 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:47.013 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:47.027 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.146 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.146 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.147 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.279 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.279 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.279 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.389 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.389 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.389 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.514 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.514 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.514 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.627 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:47.628 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:47.651 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.781 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.782 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.782 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:47.890 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.890 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:47.890 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:48.000 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:48.000 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:48.000 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:48.116 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:48.117 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:40:48.117 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:40:48.232 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:40:48.232 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:41:01.724 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:41:01.861 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:01.862 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:01.862 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:41:01.975 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:01.975 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:01.975 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:41:02.132 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:02.133 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:02.133 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:41:02.244 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:02.244 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:41:02.245 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:41:02.364 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:41:02.364 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:24.545 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:24.661 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:24.661 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:24.662 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:24.796 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:24.797 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:24.797 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:24.915 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:24.915 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:24.916 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.037 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.037 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.037 [http-nio-8080-exec-3] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.157 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:25.157 [http-nio-8080-exec-3] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:25.180 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.337 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.337 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.337 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.460 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.460 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.461 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.566 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.567 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.567 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.695 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.696 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.696 [http-nio-8080-exec-6] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.820 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:25.821 [http-nio-8080-exec-6] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:25.848 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:25.962 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.963 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:25.964 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.082 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.083 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.083 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.199 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.199 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.199 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.310 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.311 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.311 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.426 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:26.426 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:26.443 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.559 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.559 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.559 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.689 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.689 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.689 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.799 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.800 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.800 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:26.926 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.926 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:26.926 [http-nio-8080-exec-5] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.040 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:27.040 [http-nio-8080-exec-5] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:27.064 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.176 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.176 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.176 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.296 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.297 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.297 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.422 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.422 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.423 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.534 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.535 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.535 [http-nio-8080-exec-2] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.654 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:27.654 [http-nio-8080-exec-2] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:27.665 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.791 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.792 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.792 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:27.907 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.907 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:27.908 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.041 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.041 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.041 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.153 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.153 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.153 [http-nio-8080-exec-4] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.258 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:28.258 [http-nio-8080-exec-4] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:28.270 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.384 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.384 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.384 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.530 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.530 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.530 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.649 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.649 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.649 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.754 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.754 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:28.755 [http-nio-8080-exec-10] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:28.882 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:28.882 [http-nio-8080-exec-10] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:28.894 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.013 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.013 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.013 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.135 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.135 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.136 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.266 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.266 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.266 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.385 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.385 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.385 [http-nio-8080-exec-7] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.496 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:29.496 [http-nio-8080-exec-7] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:29.516 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.669 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.669 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.669 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.802 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.802 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.803 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:29.934 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.934 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:29.935 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.063 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.063 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.063 [http-nio-8080-exec-1] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.174 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:30.174 [http-nio-8080-exec-1] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:30.186 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.303 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.304 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.304 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.429 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.429 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.430 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.552 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.552 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.552 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.665 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.666 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 15:42:30.666 [http-nio-8080-exec-9] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 15:42:30.780 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:42:30.781 [http-nio-8080-exec-9] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:45:43.297 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오 페이
+2019-07-02 15:45:43.412 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 15:45:43.412 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - true
+2019-07-02 16:02:11.054 [RMI TCP Connection(72)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-07-02 16:02:11.057 [RMI TCP Connection(72)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-02 16:02:11.058 [RMI TCP Connection(72)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 16:02:11.068 [RMI TCP Connection(72)-127.0.0.1] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-02 16:02:11.068 [RMI TCP Connection(72)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-02 16:02:11.072 [RMI TCP Connection(72)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-02 17:28:41.363 [main] INFO  c.j.controllerTest.ControllerTest - Starting ControllerTest on DESKTOP-PFK81CQ with PID 73156 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:28:41.368 [main] INFO  c.j.controllerTest.ControllerTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:28:41.768 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:28:42.677 [main] WARN  o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'javabojaJpaSecurityApplication': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-02 17:28:42.688 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-02 17:28:42.786 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userRepository in com.javaboja.JavabojaJpaSecurityApplication required a bean of type 'com.javaboja.repository.UserRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.javaboja.repository.UserRepository' in your configuration.
+
+2019-07-02 17:28:42.857 [main] INFO  c.j.controllerTest.ControllerTest - Starting ControllerTest on DESKTOP-PFK81CQ with PID 73156 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:28:42.860 [main] INFO  c.j.controllerTest.ControllerTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:28:43.320 [main] WARN  o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'javabojaJpaSecurityApplication': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-02 17:28:43.324 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-02 17:28:43.388 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userRepository in com.javaboja.JavabojaJpaSecurityApplication required a bean of type 'com.javaboja.repository.UserRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.javaboja.repository.UserRepository' in your configuration.
+
+2019-07-02 17:28:43.395 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@79ca92b9] to prepare test instance [com.javaboja.controllerTest.ControllerTest@2ddc8ecb]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'javabojaJpaSecurityApplication': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 44 common frames omitted
+2019-07-02 17:36:07.638 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 72936 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:36:07.642 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:36:07.959 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:36:08.412 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:36:08.565 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 138ms. Found 3 repository interfaces.
+2019-07-02 17:36:08.640 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:36:09.529 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:dacd5f7e-0ec3-467a-a937-a49d60f39640;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:36:10.187 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:36:10.363 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:36:10.366 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:36:10.595 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:36:10.861 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:36:11.952 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:36:13.471 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:36:13.767 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.649 seconds (JVM running for 8.087)
+2019-07-02 17:36:13.791 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5c1a8622] to prepare test instance [com.javaboja.controllerTest.jpaTest@16e7dcfd]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.javaboja.controllerTest.jpaTest': Unsatisfied dependency expressed through field 'ps'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.service.PlaceService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.service.PlaceService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 29 common frames omitted
+2019-07-02 17:36:13.810 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5c1a8622] to prepare test instance [com.javaboja.controllerTest.jpaTest@7ac058a0]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.javaboja.controllerTest.jpaTest': Unsatisfied dependency expressed through field 'ps'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.service.PlaceService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.service.PlaceService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 29 common frames omitted
+2019-07-02 17:36:13.819 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:36:39.740 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 8676 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:36:39.744 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:36:40.100 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:36:40.427 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:36:40.550 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112ms. Found 3 repository interfaces.
+2019-07-02 17:36:40.610 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:36:41.249 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:207ee189-521e-4d2c-832d-16f020524dfd;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:36:42.012 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:36:42.104 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:36:42.107 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:36:42.305 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:36:42.530 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:36:43.537 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:36:45.065 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:36:45.398 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.15 seconds (JVM running for 7.254)
+2019-07-02 17:36:45.428 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2aa5fe93] to prepare test instance [com.javaboja.controllerTest.jpaTest@222114ba]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.javaboja.controllerTest.jpaTest': Unsatisfied dependency expressed through field 'ps'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.service.PlaceService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.service.PlaceService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 29 common frames omitted
+2019-07-02 17:36:45.464 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:37:46.588 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 71752 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:37:46.593 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:37:46.996 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:37:47.364 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:37:47.527 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150ms. Found 3 repository interfaces.
+2019-07-02 17:37:47.590 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:37:47.977 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:8261abf9-5869-4808-8ce3-f052826a2b6b;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:37:48.786 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:37:48.870 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:37:48.872 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:37:49.063 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:37:49.316 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:37:50.328 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:37:51.892 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:37:52.256 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.207 seconds (JVM running for 7.51)
+2019-07-02 17:37:52.277 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3b2cf7ab] to prepare test instance [com.javaboja.controllerTest.jpaTest@60dcc9fe]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.javaboja.controllerTest.jpaTest': Unsatisfied dependency expressed through field 'dao'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.dao.PlaceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.dao.PlaceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 29 common frames omitted
+2019-07-02 17:37:52.298 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:38:35.087 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 5856 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:38:35.091 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:38:35.499 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:38:35.728 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:38:35.850 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109ms. Found 3 repository interfaces.
+2019-07-02 17:38:35.904 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:38:36.190 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:4cbcebae-99a5-474c-b26e-ae298361101c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:38:36.924 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:38:37.013 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:38:37.015 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:38:37.198 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:38:37.447 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:38:38.427 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:38:39.862 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:38:40.139 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 5.656 seconds (JVM running for 7.046)
+2019-07-02 17:38:40.161 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@7995092a testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@ec756bd, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7fc2413d testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1500955a, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2e8a11cf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@76a3e297, [ImportsContextCustomizer@f8c1ddd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d371b2d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51c8530f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3b11620a]; rollback [true]
+2019-07-02 17:38:40.302 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@7995092a testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@ec756bd, testMethod = placeSelect@jpaTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@7fc2413d testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1500955a, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2e8a11cf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@76a3e297, [ImportsContextCustomizer@f8c1ddd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1d371b2d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51c8530f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-07-02 17:38:40.318 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:49:33.784 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 65744 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:49:33.788 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:49:34.083 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:49:34.432 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:49:34.674 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 222ms. Found 3 repository interfaces.
+2019-07-02 17:49:34.797 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:49:35.506 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:22527d7c-dd83-42b0-9493-d4d00b1eaa52;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:49:36.254 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:49:36.339 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:49:36.342 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:49:36.561 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:49:36.818 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:49:37.883 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:49:39.440 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:49:39.804 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.571 seconds (JVM running for 7.836)
+2019-07-02 17:49:39.827 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@de579ff]; rollback [true]
+2019-07-02 17:49:40.068 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-07-02 17:49:40.081 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:52:01.375 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 73632 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:52:01.380 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:52:01.787 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:52:02.063 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:52:02.215 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 138ms. Found 3 repository interfaces.
+2019-07-02 17:52:02.279 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:52:02.608 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:bc47dbe2-96d5-4e64-ad60-2afc106cc2ae;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:52:03.415 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:52:03.499 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:52:03.502 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:52:03.760 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:52:03.993 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:52:05.239 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:52:06.797 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:52:07.069 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.188 seconds (JVM running for 7.346)
+2019-07-02 17:52:07.093 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@251d7fdd]; rollback [true]
+2019-07-02 17:52:07.269 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-07-02 17:52:07.278 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:59:44.441 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 69792 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 17:59:44.445 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 17:59:44.929 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 17:59:45.285 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 17:59:45.446 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144ms. Found 3 repository interfaces.
+2019-07-02 17:59:45.526 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 17:59:45.851 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:8d0ad4c7-4169-4407-85e3-9be920ccb896;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 17:59:46.581 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 17:59:46.679 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 17:59:46.682 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 17:59:46.895 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 17:59:47.185 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 17:59:48.311 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 17:59:49.864 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 17:59:50.159 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.238 seconds (JVM running for 7.546)
+2019-07-02 17:59:50.179 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2fd1ad8a]; rollback [true]
+2019-07-02 17:59:50.365 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-07-02 17:59:50.377 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 18:00:35.939 [main] INFO  com.javaboja.controllerTest.jpaTest - Starting jpaTest on DESKTOP-PFK81CQ with PID 66240 (started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 18:00:35.942 [main] INFO  com.javaboja.controllerTest.jpaTest - No active profile set, falling back to default profiles: default
+2019-07-02 18:00:36.235 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 18:00:36.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 18:00:36.899 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 180ms. Found 3 repository interfaces.
+2019-07-02 18:00:36.985 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2019-07-02 18:00:37.425 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:aec7798c-850f-4c43-b722-bf2c7e706369;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2019-07-02 18:00:38.206 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 18:00:38.293 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 18:00:38.295 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 18:00:38.501 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 18:00:38.760 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 18:00:39.805 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 18:00:41.338 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 18:00:41.608 [main] INFO  com.javaboja.controllerTest.jpaTest - Started jpaTest in 6.144 seconds (JVM running for 7.309)
+2019-07-02 18:00:41.627 [main] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@251d7fdd]; rollback [true]
+2019-07-02 18:00:41.818 [main] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@70be0a2b testClass = jpaTest, testInstance = com.javaboja.controllerTest.jpaTest@222114ba, testMethod = placeSelect@jpaTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2133814f testClass = jpaTest, locations = '{}', classes = '{class com.javaboja.JavabojaJpaSecurityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@60285225, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@755e37bd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6121c9d6, [ImportsContextCustomizer@4c15e7fd key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51c8530f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c81cdd1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2019-07-02 18:00:41.827 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 18:06:39.372 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 70840 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-02 18:06:39.373 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-02 18:06:39.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-02 18:06:39.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-02 18:06:39.492 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-07-02 18:06:40.405 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-02 18:06:40.503 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89ms. Found 3 repository interfaces.
+2019-07-02 18:06:40.891 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d3de9d39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-02 18:06:41.223 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-02 18:06:41.239 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-02 18:06:41.250 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-02 18:06:41.250 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-02 18:06:41.400 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-02 18:06:41.400 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1983 ms
+2019-07-02 18:06:41.600 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-02 18:06:41.799 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-02 18:06:41.858 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-02 18:06:41.918 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-02 18:06:41.920 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-02 18:06:42.068 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-02 18:06:42.216 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-02 18:06:42.939 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-02 18:06:42.986 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-02 18:06:43.303 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-02 18:06:43.624 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-02 18:06:43.624 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-02 18:06:43.624 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-02 18:06:43.625 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-02 18:06:43.625 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-02 18:06:43.625 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-02 18:06:43.625 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-02 18:06:43.655 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49cdb2d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@c9c7d6f, org.springframework.security.web.header.HeaderWriterFilter@455d6d95, org.springframework.security.web.csrf.CsrfFilter@64b2feb0, org.springframework.security.web.authentication.logout.LogoutFilter@57f8f32b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5407ece0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63bc28ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48965c06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22c637e0, org.springframework.security.web.session.SessionManagementFilter@5f67eea6, org.springframework.security.web.access.ExceptionTranslationFilter@2dacd66b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e41dfde]
+2019-07-02 18:06:44.949 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 18:06:44.985 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-02 18:06:45.263 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-02 18:06:45.300 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-02 18:06:45.304 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 6.338 seconds (JVM running for 7.628)
+2019-07-02 18:06:48.616 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-02 18:06:48.616 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-02 18:06:48.630 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-02 18:07:00.351 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 18:07:01.561 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.562 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.564 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 18:07:01.691 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.691 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.692 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 18:07:01.812 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.813 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
+2019-07-02 18:07:01.813 [http-nio-8080-exec-8] INFO  com.javaboja.utils.HttpClientService - url : https://dapi.kakao.com/v2/local/search/keyword.json?query=카카오
+2019-07-02 18:07:01.934 [http-nio-8080-exec-8] INFO  com.javaboja.utils.JsonConverter - false
