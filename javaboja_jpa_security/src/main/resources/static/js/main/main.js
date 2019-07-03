@@ -1,7 +1,7 @@
 //요청 페이지 크기
 var pageSize=10;
 //요청 url
-var url="https://dapi.kakao.com/v2/local/search/keyword.json?";
+var url="http://dapi.kakao.com/v2/local/search/keyword.json?";
 $(document).ready(function(){
 	
 	/*window.addEventListener('popstate', function () {
