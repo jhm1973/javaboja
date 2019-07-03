@@ -21,13 +21,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import com.javaboja.dao.PlaceDao;
-import com.javaboja.repository.PlaceRepository;
 import com.javaboja.service.PlaceService;
 import com.javaboja.vo.History;
 import com.javaboja.vo.Paging;
-import com.javaboja.vo.Place;
 import com.javaboja.vo.User;
 
 @RunWith(SpringRunner.class)
@@ -36,8 +32,6 @@ public class jpaTest {
 
 	@Autowired
 	private EntityManager em;
-	@Autowired
-	private PlaceRepository pr;
 	//데이터 추가 삭제
 //	@Test
 //	public void deletePlace() {
@@ -145,76 +139,76 @@ public class jpaTest {
 	
 	//검색할 때 마다 모두 DB에 저장한 뒤 추후 검색 시 select로 데이터 확인 후 insert하는 방법 처리 시간 확인
 	//@Test
-	public void test1() {
-		//데이터 등록
-		for(int i=0; i<50000; i++) {
-			Place place = new Place();
-			place.setAddressName("주소");
-			place.setLatitude("위도");
-			place.setLongitude("경도");
-			place.setPhone("번호");
-			place.setPlaceName("장소명");
-			place.setPlaceUrl("URL");
-			place.setRoadAddressName("도로명주소");
-			if(i>10000) {
-				place.setUserId("javaboja5");
-			}else if(i>20000) {
-				place.setUserId("javaboja4");
-			}else if(i>30000) {
-				place.setUserId("javaboja3");
-			}else if(i>40000) {
-				place.setUserId("javaboja2");
-			}else{
-				place.setUserId("javaboja1");
-			}
-			
-			place.setPlaceCode(""+i);
-			em.persist(place);
-		}
-		//test2();
-		pr.deleteAllByUserId("javaboja1");
-		for(int i=0; i<10; i++) {
-			Place place = new Place();
-			place.setAddressName("주소");
-			place.setLatitude("위도");
-			place.setLongitude("경도");
-			place.setPhone("번호");
-			place.setPlaceName("장소명");
-			place.setPlaceUrl("URL");
-			place.setRoadAddressName("도로명주소");
-			place.setUserId("javaboja1");
-			place.setPlaceCode(""+i);
-			em.persist(place);
-		}
-//		pr.findByPlaceCodeAndUserId("2342", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("223", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("12334", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("6654", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("5567", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("24", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("545", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("22222", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("34455", "javaboja1");
-//		pr.findByPlaceCodeAndUserId("5678", "javaboja1");
-		
-	}
-	
-	//@Test
-	public void test2() {
-		//0.012ms
-		for(int i=0;i<10;i++) {
-			pr.findByPlaceCodeAndUserId("45434", "javaboja1");
-		}
-	}
-	
-	//@Test
-	public void test3() {
-		//
-		pr.deleteAllByUserId("javaboja1");
-	}
-	
-	@Test
-	public void test4() {
-		em.find(User.class, "javaboja1");
-	}
+//	public void test1() {
+//		//데이터 등록
+//		for(int i=0; i<50000; i++) {
+//			Place place = new Place();
+//			place.setAddressName("주소");
+//			place.setLatitude("위도");
+//			place.setLongitude("경도");
+//			place.setPhone("번호");
+//			place.setPlaceName("장소명");
+//			place.setPlaceUrl("URL");
+//			place.setRoadAddressName("도로명주소");
+//			if(i>10000) {
+//				place.setUserId("javaboja5");
+//			}else if(i>20000) {
+//				place.setUserId("javaboja4");
+//			}else if(i>30000) {
+//				place.setUserId("javaboja3");
+//			}else if(i>40000) {
+//				place.setUserId("javaboja2");
+//			}else{
+//				place.setUserId("javaboja1");
+//			}
+//			
+//			place.setPlaceCode(""+i);
+//			em.persist(place);
+//		}
+//		//test2();
+//		pr.deleteAllByUserId("javaboja1");
+//		for(int i=0; i<10; i++) {
+//			Place place = new Place();
+//			place.setAddressName("주소");
+//			place.setLatitude("위도");
+//			place.setLongitude("경도");
+//			place.setPhone("번호");
+//			place.setPlaceName("장소명");
+//			place.setPlaceUrl("URL");
+//			place.setRoadAddressName("도로명주소");
+//			place.setUserId("javaboja1");
+//			place.setPlaceCode(""+i);
+//			em.persist(place);
+//		}
+////		pr.findByPlaceCodeAndUserId("2342", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("223", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("12334", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("6654", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("5567", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("24", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("545", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("22222", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("34455", "javaboja1");
+////		pr.findByPlaceCodeAndUserId("5678", "javaboja1");
+//		
+//	}
+//	
+//	//@Test
+//	public void test2() {
+//		//0.012ms
+//		for(int i=0;i<10;i++) {
+//			pr.findByPlaceCodeAndUserId("45434", "javaboja1");
+//		}
+//	}
+//	
+//	//@Test
+//	public void test3() {
+//		//
+//		pr.deleteAllByUserId("javaboja1");
+//	}
+//	
+//	@Test
+//	public void test4() {
+//		em.find(User.class, "javaboja1");
+//	}
 }

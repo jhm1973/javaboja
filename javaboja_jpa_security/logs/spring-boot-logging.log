@@ -4121,3 +4121,810 @@ org.springframework.security.web.firewall.RequestRejectedException: The request 
 2019-07-03 20:06:56.963 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
 2019-07-03 20:06:56.963 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 2.556 seconds (JVM running for 9004.069)
 2019-07-03 20:06:56.965 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-07-03 20:08:13.124 [Thread-229] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:08:13.125 [Thread-229] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:08:13.129 [Thread-229] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:08:13.129 [Thread-229] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-38 - Shutdown initiated...
+2019-07-03 20:08:13.133 [Thread-229] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-38 - Shutdown completed.
+2019-07-03 20:08:13.740 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:08:13.740 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:08:14.032 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:08:14.059 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27ms. Found 3 repository interfaces.
+2019-07-03 20:08:14.118 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:08:14.299 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:08:14.299 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:08:14.300 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:08:14.300 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:08:14.329 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:08:14.329 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 587 ms
+2019-07-03 20:08:14.386 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Starting...
+2019-07-03 20:08:14.387 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Start completed.
+2019-07-03 20:08:14.400 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:08:14.433 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:08:14.494 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:08:14.511 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:08:14.564 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-03 20:08:14.660 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-03 20:08:14.669 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bdf2c26, org.springframework.security.web.context.SecurityContextPersistenceFilter@59ae91da, org.springframework.security.web.header.HeaderWriterFilter@7b7bb925, org.springframework.security.web.csrf.CsrfFilter@5fb32eda, org.springframework.security.web.authentication.logout.LogoutFilter@7f879c1d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@47ef57ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b042f81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d101955, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76a2392, org.springframework.security.web.session.SessionManagementFilter@1fadb90b, org.springframework.security.web.access.ExceptionTranslationFilter@55f4f583, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1138c497]
+2019-07-03 20:08:15.683 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:08:15.689 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-03 20:08:15.788 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:08:15.792 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 20:08:15.792 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 2.082 seconds (JVM running for 9082.898)
+2019-07-03 20:08:15.795 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-07-03 20:09:37.014 [Thread-235] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:09:37.015 [Thread-235] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:09:37.018 [Thread-235] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:09:37.018 [Thread-235] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Shutdown initiated...
+2019-07-03 20:09:37.021 [Thread-235] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-39 - Shutdown completed.
+2019-07-03 20:09:37.687 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:09:37.687 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:09:38.081 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:09:38.118 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36ms. Found 3 repository interfaces.
+2019-07-03 20:09:38.188 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:09:38.367 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:09:38.368 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:09:38.368 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:09:38.368 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:09:38.395 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:09:38.395 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 705 ms
+2019-07-03 20:09:38.450 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Starting...
+2019-07-03 20:09:38.452 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Start completed.
+2019-07-03 20:09:38.463 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:09:38.495 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:09:38.549 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:09:38.569 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:09:38.610 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:09:38.622 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+2019-07-03 20:09:38.622 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:09:38.624 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:09:38.625 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Shutdown initiated...
+2019-07-03 20:09:38.627 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Shutdown completed.
+2019-07-03 20:09:38.628 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:09:38.638 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:09:38.650 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.javaboja.JavabojaJpaSecurityApplication.main(JavabojaJpaSecurityApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 35 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at com.javaboja.service.PlaceService.<init>(PlaceService.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 37 common frames omitted
+2019-07-03 20:09:58.903 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:09:58.903 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:09:59.279 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:09:59.305 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26ms. Found 3 repository interfaces.
+2019-07-03 20:09:59.367 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:09:59.583 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:09:59.583 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:09:59.583 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:09:59.584 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:09:59.615 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:09:59.615 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 710 ms
+2019-07-03 20:09:59.681 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Starting...
+2019-07-03 20:09:59.683 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Start completed.
+2019-07-03 20:09:59.696 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:09:59.732 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:09:59.804 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:09:59.823 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:09:59.873 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:09:59.879 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+2019-07-03 20:09:59.879 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:09:59.881 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:09:59.881 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Shutdown initiated...
+2019-07-03 20:09:59.884 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-41 - Shutdown completed.
+2019-07-03 20:09:59.884 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:09:59.891 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:09:59.892 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.javaboja.JavabojaJpaSecurityApplication.main(JavabojaJpaSecurityApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 35 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at com.javaboja.service.PlaceService.<init>(PlaceService.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 37 common frames omitted
+2019-07-03 20:10:14.048 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:10:14.049 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:10:14.441 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:10:14.472 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31ms. Found 3 repository interfaces.
+2019-07-03 20:10:14.541 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:10:14.787 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:10:14.788 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:10:14.788 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:10:14.788 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:10:14.827 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:10:14.827 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 776 ms
+2019-07-03 20:10:14.905 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Starting...
+2019-07-03 20:10:14.908 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Start completed.
+2019-07-03 20:10:14.921 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:10:14.952 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:10:15.010 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:10:15.032 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:10:15.076 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:10:15.082 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+2019-07-03 20:10:15.083 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:10:15.085 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:10:15.085 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Shutdown initiated...
+2019-07-03 20:10:15.087 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-42 - Shutdown completed.
+2019-07-03 20:10:15.088 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:10:15.112 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:10:15.113 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.javaboja.JavabojaJpaSecurityApplication.main(JavabojaJpaSecurityApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'placeService' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\service\PlaceService.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.service.PlaceService]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 35 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.dao.PlaceDao cannot be resolved
+	PlaceDao cannot be resolved to a type
+
+	at com.javaboja.service.PlaceService.<init>(PlaceService.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 37 common frames omitted
+2019-07-03 20:10:27.107 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:10:27.108 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:10:27.445 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:10:27.471 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26ms. Found 3 repository interfaces.
+2019-07-03 20:10:27.523 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:10:27.670 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:10:27.671 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:10:27.671 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:10:27.671 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:10:27.709 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:10:27.709 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 599 ms
+2019-07-03 20:10:27.767 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Starting...
+2019-07-03 20:10:27.768 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Start completed.
+2019-07-03 20:10:27.778 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:10:27.809 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:10:27.854 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:10:27.866 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:10:27.903 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-03 20:10:27.979 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-03 20:10:27.986 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2534dc02, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c467029, org.springframework.security.web.header.HeaderWriterFilter@62d51e9c, org.springframework.security.web.csrf.CsrfFilter@3b476c48, org.springframework.security.web.authentication.logout.LogoutFilter@2a2ba670, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@28c5a96, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67f2377c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d19f4e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d2aa8a, org.springframework.security.web.session.SessionManagementFilter@1ce36ad1, org.springframework.security.web.access.ExceptionTranslationFilter@7691bbd6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26311530]
+2019-07-03 20:10:29.034 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:10:29.040 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-03 20:10:29.144 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:10:29.149 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 20:10:29.149 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 2.084 seconds (JVM running for 9216.255)
+2019-07-03 20:10:29.151 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-07-03 20:10:47.639 [Thread-241] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:10:47.641 [Thread-241] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:10:47.646 [Thread-241] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:10:47.646 [Thread-241] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Shutdown initiated...
+2019-07-03 20:10:47.648 [Thread-241] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-43 - Shutdown completed.
+2019-07-03 20:10:48.422 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:10:48.423 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:10:48.679 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:10:48.703 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 3 repository interfaces.
+2019-07-03 20:10:48.755 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:10:48.898 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:10:48.899 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:10:48.899 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:10:48.899 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:10:48.925 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:10:48.925 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 501 ms
+2019-07-03 20:10:48.975 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Starting...
+2019-07-03 20:10:48.977 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Start completed.
+2019-07-03 20:10:48.993 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:10:49.026 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:10:49.068 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:10:49.082 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:10:49.120 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:10:49.185 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-03 20:10:49.185 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-03 20:10:49.185 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-03 20:10:49.185 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-03 20:10:49.185 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-03 20:10:49.186 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-03 20:10:49.186 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-03 20:10:49.193 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10b68a7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4aa85a75, org.springframework.security.web.header.HeaderWriterFilter@497d501a, org.springframework.security.web.csrf.CsrfFilter@74f195dd, org.springframework.security.web.authentication.logout.LogoutFilter@26a3465a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ab06181, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ccf9a61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f91ee62, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@757ac3ee, org.springframework.security.web.session.SessionManagementFilter@328f6e84, org.springframework.security.web.access.ExceptionTranslationFilter@1162f079, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70a19cf1]
+2019-07-03 20:10:50.204 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:10:50.209 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-03 20:10:50.340 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:10:50.345 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 20:10:50.346 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 1.958 seconds (JVM running for 9237.452)
+2019-07-03 20:10:50.350 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-07-03 20:11:16.749 [Thread-256] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:11:16.752 [Thread-256] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:11:16.756 [Thread-256] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:11:16.756 [Thread-256] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Shutdown initiated...
+2019-07-03 20:11:16.758 [Thread-256] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-44 - Shutdown completed.
+2019-07-03 20:11:17.468 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:11:17.469 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:11:17.769 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:11:17.794 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 3 repository interfaces.
+2019-07-03 20:11:17.845 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:11:18.006 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:11:18.007 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:11:18.007 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:11:18.007 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:11:18.039 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:11:18.039 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 567 ms
+2019-07-03 20:11:18.094 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Starting...
+2019-07-03 20:11:18.095 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Start completed.
+2019-07-03 20:11:18.104 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:11:18.132 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:11:18.177 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:11:18.189 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:11:18.223 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:11:18.288 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-03 20:11:18.288 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-03 20:11:18.289 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-03 20:11:18.289 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-03 20:11:18.289 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-03 20:11:18.289 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-03 20:11:18.289 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-03 20:11:18.295 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19f3c51a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d8af6e7, org.springframework.security.web.header.HeaderWriterFilter@d7b0399, org.springframework.security.web.csrf.CsrfFilter@7c1e53f1, org.springframework.security.web.authentication.logout.LogoutFilter@bcc40d2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@617768ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5030765b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@582c00f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c52f56e, org.springframework.security.web.session.SessionManagementFilter@2305a8ad, org.springframework.security.web.access.ExceptionTranslationFilter@7091bacf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25382e37]
+2019-07-03 20:11:19.313 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:11:19.317 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-03 20:11:19.423 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:11:19.427 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 20:11:19.427 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 1.996 seconds (JVM running for 9266.533)
+2019-07-03 20:11:19.430 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-07-03 20:12:59.648 [Thread-262] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:12:59.651 [Thread-262] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:12:59.655 [Thread-262] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:12:59.655 [Thread-262] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Shutdown initiated...
+2019-07-03 20:12:59.659 [Thread-262] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-45 - Shutdown completed.
+2019-07-03 20:13:00.409 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:13:00.409 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:13:00.702 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:13:00.732 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 3 repository interfaces.
+2019-07-03 20:13:00.792 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:13:00.943 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:13:00.944 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:13:00.944 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:13:00.944 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:13:00.972 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:13:00.972 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 561 ms
+2019-07-03 20:13:01.032 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Starting...
+2019-07-03 20:13:01.034 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Start completed.
+2019-07-03 20:13:01.049 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:13:01.091 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:13:01.144 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:13:01.159 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:13:01.200 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-03 20:13:01.269 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-03 20:13:01.269 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-03 20:13:01.269 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-03 20:13:01.270 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-03 20:13:01.270 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-03 20:13:01.270 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-03 20:13:01.270 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-03 20:13:01.278 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56496cbf, org.springframework.security.web.context.SecurityContextPersistenceFilter@2523960, org.springframework.security.web.header.HeaderWriterFilter@634040b8, org.springframework.security.web.csrf.CsrfFilter@584c5f48, org.springframework.security.web.authentication.logout.LogoutFilter@57ef34fc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68b72878, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ae07d2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b44b74f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ef38e63, org.springframework.security.web.session.SessionManagementFilter@38de972c, org.springframework.security.web.access.ExceptionTranslationFilter@f7ef68f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28773d58]
+2019-07-03 20:13:02.403 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:13:02.414 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-03 20:13:02.594 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:13:02.599 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 20:13:02.600 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 2.225 seconds (JVM running for 9369.706)
+2019-07-03 20:13:02.604 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-07-03 20:13:31.074 [Thread-268] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:13:31.076 [Thread-268] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:13:31.080 [Thread-268] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:13:31.080 [Thread-268] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Shutdown initiated...
+2019-07-03 20:13:31.083 [Thread-268] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-46 - Shutdown completed.
+2019-07-03 20:13:31.806 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:13:31.807 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:13:32.102 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:13:32.123 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 2 repository interfaces.
+2019-07-03 20:13:32.177 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:13:32.322 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:13:32.323 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:13:32.323 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:13:32.324 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:13:32.349 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:13:32.349 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 538 ms
+2019-07-03 20:13:32.409 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Starting...
+2019-07-03 20:13:32.410 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Start completed.
+2019-07-03 20:13:32.420 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:13:32.449 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:13:32.484 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:13:32.501 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:13:32.535 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'placeRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javaboja.repository.PlaceRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-03 20:13:32.535 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:13:32.537 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:13:32.538 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Shutdown initiated...
+2019-07-03 20:13:32.542 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-47 - Shutdown completed.
+2019-07-03 20:13:32.543 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:13:32.549 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:13:32.741 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field placeRepository in com.javaboja.controller.MainController required a bean of type 'com.javaboja.repository.PlaceRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.javaboja.repository.PlaceRepository' in your configuration.
+
+2019-07-03 20:13:59.721 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:13:59.721 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:14:00.053 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:14:00.076 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 2 repository interfaces.
+2019-07-03 20:14:00.132 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:14:00.291 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:14:00.292 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:14:00.292 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:14:00.292 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:14:00.320 [restartedMain] INFO  o.a.c.c.C.[Tomcat-4].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:14:00.320 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 597 ms
+2019-07-03 20:14:00.387 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Starting...
+2019-07-03 20:14:00.388 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Start completed.
+2019-07-03 20:14:00.398 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:14:00.425 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:14:00.454 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:00.467 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:14:00.498 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\controller\MainController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+2019-07-03 20:14:00.498 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:00.500 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:14:00.500 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Shutdown initiated...
+2019-07-03 20:14:00.503 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-48 - Shutdown completed.
+2019-07-03 20:14:00.504 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:14:00.512 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:14:00.513 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\controller\MainController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.javaboja.JavabojaJpaSecurityApplication.main(JavabojaJpaSecurityApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at com.javaboja.controller.MainController.<init>(MainController.java:16)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 24 common frames omitted
+2019-07-03 20:14:32.155 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:14:32.155 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:14:32.448 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:14:32.479 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31ms. Found 2 repository interfaces.
+2019-07-03 20:14:32.537 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:14:32.679 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:14:32.679 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:14:32.680 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:14:32.680 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:14:32.705 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:14:32.705 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 548 ms
+2019-07-03 20:14:32.756 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Starting...
+2019-07-03 20:14:32.758 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Start completed.
+2019-07-03 20:14:32.768 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:14:32.797 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:14:32.830 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:32.842 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:14:32.894 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\controller\MainController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+2019-07-03 20:14:32.895 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:32.896 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:14:32.896 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Shutdown initiated...
+2019-07-03 20:14:32.900 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-49 - Shutdown completed.
+2019-07-03 20:14:32.900 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:14:32.907 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:14:32.908 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\controller\MainController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.javaboja.JavabojaJpaSecurityApplication.main(JavabojaJpaSecurityApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at com.javaboja.controller.MainController.<init>(MainController.java:16)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 24 common frames omitted
+2019-07-03 20:14:38.783 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:14:38.783 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:14:39.050 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:14:39.073 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 2 repository interfaces.
+2019-07-03 20:14:39.124 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:14:39.293 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:14:39.294 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:14:39.294 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:14:39.294 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:14:39.327 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:14:39.328 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 543 ms
+2019-07-03 20:14:39.384 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Starting...
+2019-07-03 20:14:39.385 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Start completed.
+2019-07-03 20:14:39.410 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:14:39.457 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:14:39.486 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:39.498 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:14:39.527 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\controller\MainController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+2019-07-03 20:14:39.527 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:39.529 [restartedMain] INFO  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-07-03 20:14:39.529 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Shutdown initiated...
+2019-07-03 20:14:39.532 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-50 - Shutdown completed.
+2019-07-03 20:14:39.532 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-03 20:14:39.541 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-03 20:14:39.542 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main\com\javaboja\controller\MainController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.javaboja.JavabojaJpaSecurityApplication.main(JavabojaJpaSecurityApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.javaboja.controller.MainController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.javaboja.repository.PlaceRepository cannot be resolved
+	PlaceRepository cannot be resolved to a type
+
+	at com.javaboja.controller.MainController.<init>(MainController.java:16)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 24 common frames omitted
+2019-07-03 20:14:52.481 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Starting JavabojaJpaSecurityApplication on DESKTOP-PFK81CQ with PID 77236 (C:\Users\carrey\git\javaboja\javaboja_jpa_security\bin\main started by carrey in C:\Users\carrey\git\javaboja\javaboja_jpa_security)
+2019-07-03 20:14:52.481 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - No active profile set, falling back to default profiles: default
+2019-07-03 20:14:52.858 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-03 20:14:52.884 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26ms. Found 2 repository interfaces.
+2019-07-03 20:14:52.934 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27c7acab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-03 20:14:53.096 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-03 20:14:53.096 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:14:53.096 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 20:14:53.097 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 20:14:53.121 [restartedMain] INFO  o.a.c.c.C.[Tomcat-7].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 20:14:53.121 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 638 ms
+2019-07-03 20:14:53.168 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-51 - Starting...
+2019-07-03 20:14:53.170 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-51 - Start completed.
+2019-07-03 20:14:53.180 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-03 20:14:53.207 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-07-03 20:14:53.236 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-03 20:14:53.253 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/loginError'], []
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/registration'], []
+2019-07-03 20:14:53.347 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2console/**'], []
+2019-07-03 20:14:53.354 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41390fbb, org.springframework.security.web.context.SecurityContextPersistenceFilter@20b6ccbe, org.springframework.security.web.header.HeaderWriterFilter@767a8ca5, org.springframework.security.web.csrf.CsrfFilter@1e8c94, org.springframework.security.web.authentication.logout.LogoutFilter@9be996, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@595551c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@320af2c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b75f89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@590a8345, org.springframework.security.web.session.SessionManagementFilter@54388081, org.springframework.security.web.access.ExceptionTranslationFilter@7fcdbc75, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a412ff9]
+2019-07-03 20:14:54.355 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-03 20:14:54.361 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-03 20:14:54.470 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-03 20:14:54.474 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-03 20:14:54.474 [restartedMain] INFO  c.j.JavabojaJpaSecurityApplication - Started JavabojaJpaSecurityApplication in 2.025 seconds (JVM running for 9481.579)
+2019-07-03 20:14:54.476 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

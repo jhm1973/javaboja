@@ -24,17 +24,4 @@ public class JsonConverterUtil {
 		}
 		return placeArray;
 	}
-	
-	public JSONObject StringToJsonObject(String data, String searchType) {
-		JSONParser jp = null;
-		JSONObject jo = null;
-		try {
-			jp = new JSONParser();
-			jo = (JSONObject)jp.parse(data);
-			jo = (JSONObject)jo.get(searchType);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return jo;
-	}
 }

@@ -12,25 +12,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.javaboja.dao.PlaceDao;
-import com.javaboja.repository.HistoryRepository;
-import com.javaboja.repository.PlaceRepository;
-import com.javaboja.repository.UserRepository;
 import com.javaboja.service.HistoryService;
 import com.javaboja.service.PlaceService;
-import com.javaboja.utils.HttpClientUtil;
-import com.javaboja.utils.JsonConverterUtil;
 import com.javaboja.vo.History;
-import com.javaboja.vo.Place;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @Slf4j
 public class MainController {
 
-	@Autowired
-	PlaceRepository placeRepository;
 	@Autowired
 	PlaceService placeService;
 	@Autowired
@@ -50,18 +40,7 @@ public class MainController {
 	public String mainFilter(Principal principal) {
 		return "redirect:main";
 	}
-//	@GetMapping("/main/place/search")
-//	@ResponseBody 
-//	public Page<Place> javabojaSearch(@RequestParam String keyword, 
-// 									  @RequestParam String url,
-//				  					  @RequestParam String pageSize,
-//				  					  @RequestParam int curPage, 
-//				  					  @RequestParam boolean realSearch,
-//				  					  Principal principal) 
-//	{ 
-//		return placeService.placeSearchService(principal.getName(), keyword, url, pageSize, kakao_token, curPage, realSearch);
-//	}
-	
+
 	@GetMapping("/main/place/search")
 	@ResponseBody 
 	public ResponseEntity<String> javabojaSearch(@RequestParam String keyword, 
@@ -83,8 +62,6 @@ public class MainController {
 									  @RequestParam int curPage, 
 							  		  Principal principal)
 	{
-		//Place place = placeRepository.findByPlaceId(id);
-		
 		return placeService.placeDetail(id, keyword, url, pageSize, curPage, kakao_token);
 	}
 	
