@@ -125,8 +125,8 @@ $(document).ready(function(){
 					data = JSON.parse(data);
 					var phoneText = '<div> 전화번호 : '+data.phone+'</div>';
 					var urlText = '<div> URL : '+data.place_url+'</div>';
-					var loadAddrText = '<div> 도로명 주소 : '+data.roadAddress_name+'</div>';
-					if(data.roadAddress_name==undefined){
+					var loadAddrText = '<div> 도로명 주소 : '+data.road_address_name+'</div>';
+					if(data.road_address_name==undefined){
 						loadAddrText="";
 					}
 					if(data.phone==undefined){
