@@ -29,10 +29,14 @@ import com.javaboja.vo.User;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 public class jpaTest {
-
-	@Autowired
-	private EntityManager em;
-	//데이터 추가 삭제
+	
+	@Test
+	public void contextLoads() {
+		
+	}
+//	@Autowired
+//	private EntityManager em;
+//	//데이터 추가 삭제
 //	@Test
 //	public void deletePlace() {
 //		for(int i=1;i<=10;i++) {
