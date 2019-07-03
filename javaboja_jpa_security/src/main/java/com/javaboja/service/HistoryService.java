@@ -1,12 +1,7 @@
 package com.javaboja.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +11,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import com.javaboja.dao.HistoryDao;
-import com.javaboja.repository.HistoryRepository;
 import com.javaboja.vo.History;
 import com.javaboja.vo.Paging;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Component
+@Slf4j
 public class HistoryService {
 
 	@Autowired
@@ -39,7 +34,10 @@ public class HistoryService {
 	}
 	
 	public Page<History> getHistorySelect(String userId, int curPage){
-		return historyDao.getHistorySelect(userId, curPage);
+		int listCnt = (int)historyDao.getHistoryCount(userId);
+		Paging pagingVo = new Paging(listCnt, curPage);
+		Pageable pageable = PageRequest.of(curPage-1, pagingVo.getPageSize());
+		return historyDao.getHistorySelect(userId, pageable);
 	}
 	
 	public List<History> getPopularList(){

@@ -8,15 +8,14 @@ import lombok.extern.slf4j.Slf4j;
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 
 @Component
 @Slf4j
 public class HttpClientUtil{
 
-	public String httpClientGet(String keyword, String url, String pageSize, int page, String kakaoToken) {
-		log.info("url : "+url+"query="+keyword);
-		//JsonConverterUtil jsonConverter = new JsonConverterUtil();
-		String responseBody = "";
+	public Response httpClientGet(String keyword, String url, String pageSize, int page, String kakaoToken) throws Exception{
+		Response response = null;
 		OkHttpClient client = new OkHttpClient.Builder()
 				.connectTimeout(60, TimeUnit.MINUTES)
 				.followRedirects(true)
@@ -26,7 +25,6 @@ public class HttpClientUtil{
 				.connectionPool(new ConnectionPool(5, 1, TimeUnit.SECONDS))
 				.build();
 		Request request = null;
-		try {
 			request = new Request.Builder()
 	        		.addHeader("Authorization", "KakaoAK " + kakaoToken)
 	        		.url(url+"query="+keyword+
@@ -34,13 +32,7 @@ public class HttpClientUtil{
 	        				 "&page="+page
 	        				)
 	        		.build();
-			responseBody = client.newCall(request).execute().body().string();
-			
-			//jsonConverter.StringToJsonObject(responseBody,"meta");
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return responseBody;
+			response = client.newCall(request).execute();
+		return response;
 	}
 }

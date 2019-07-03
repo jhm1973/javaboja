@@ -6,10 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.javaboja.dao.PlaceDao;
 import com.javaboja.repository.HistoryRepository;
@@ -37,10 +39,17 @@ public class MainController {
 	private String kakao_token;
 	
 	@GetMapping("/main")
-	public String main() {
-		return "main";
+	public ModelAndView main(Principal principal) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("userId", principal.getName());
+		mav.setViewName("main");
+		return mav;
 	}
 	
+	@GetMapping({"/*","/search*","/history*","/popular*","/search*","/detail"})
+	public String mainFilter(Principal principal) {
+		return "redirect:main";
+	}
 //	@GetMapping("/main/place/search")
 //	@ResponseBody 
 //	public Page<Place> javabojaSearch(@RequestParam String keyword, 
@@ -55,7 +64,7 @@ public class MainController {
 	
 	@GetMapping("/main/place/search")
 	@ResponseBody 
-	public String javabojaSearch(@RequestParam String keyword, 
+	public ResponseEntity<String> javabojaSearch(@RequestParam String keyword, 
 							     @RequestParam String url,
 		  					     @RequestParam String pageSize,
 		  					     @RequestParam int curPage, 
@@ -67,7 +76,7 @@ public class MainController {
 	
 	@GetMapping("/main/place/detail")
 	@ResponseBody
-	public String javabojaSearchDetail(@RequestParam String id,
+	public ResponseEntity<String> javabojaSearchDetail(@RequestParam String id,
 									  @RequestParam String keyword, 
 									  @RequestParam String url,
 									  @RequestParam String pageSize,

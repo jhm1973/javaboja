@@ -28,6 +28,7 @@ import com.javaboja.service.PlaceService;
 import com.javaboja.vo.History;
 import com.javaboja.vo.Paging;
 import com.javaboja.vo.Place;
+import com.javaboja.vo.User;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
@@ -143,7 +144,7 @@ public class jpaTest {
 //	}
 	
 	//검색할 때 마다 모두 DB에 저장한 뒤 추후 검색 시 select로 데이터 확인 후 insert하는 방법 처리 시간 확인
-	@Test
+	//@Test
 	public void test1() {
 		//데이터 등록
 		for(int i=0; i<50000; i++) {
@@ -210,5 +211,10 @@ public class jpaTest {
 	public void test3() {
 		//
 		pr.deleteAllByUserId("javaboja1");
+	}
+	
+	@Test
+	public void test4() {
+		em.find(User.class, "javaboja1");
 	}
 }

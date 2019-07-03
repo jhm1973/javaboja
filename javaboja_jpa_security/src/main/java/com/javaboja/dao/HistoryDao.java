@@ -49,10 +49,7 @@ public class HistoryDao {
 		return (long)query.getSingleResult();
 	}
 	
-	public Page<History> getHistorySelect(String userId, int curPage){
-		int listCnt = (int)getHistoryCount(userId);
-		Paging pagingVo = new Paging(listCnt, curPage);
-		Pageable pageable = PageRequest.of(curPage-1, pagingVo.getPageSize());
+	public Page<History> getHistorySelect(String userId, Pageable pageable){
 		return historyRepository.findByUserIdOrderByCreateDateTimeDesc(userId, pageable);
 	}
 	

@@ -24,10 +24,11 @@ div.greenTable {
   padding: 3px 2px;
 }
 .divTable.greenTable .divTableBody .divTableCell {
-  font-size: 13px;
+  font-size: 15px;
+  padding : 10px;
 }
 .divTable.greenTable .divTableHeading .divTableHead {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   color: #000000;
   text-align: center;
@@ -88,7 +89,7 @@ div.greenTable {
 	text-decoration:none;
 	color : black;
 }
-body{
+   body{
       overflow:hidden;
    }
    a{
@@ -100,7 +101,6 @@ body{
    }
    #nav{
       position: absolute;
-      border : 1px solid red;
       width : 20%;
       background-color: #007acc;
       height : 3000px;
@@ -111,7 +111,6 @@ body{
    }
    #main{
       position: absolute;
-      border : 1px solid blue;
       width : 80%;
       left : 20%;
       height : 100%;
@@ -129,7 +128,6 @@ body{
    }
    #search_detail{
       position: relative;
-      border: 1px solid green;
       display: none;
    }
    #history_result{
@@ -140,19 +138,57 @@ body{
    }
    #logout_nav{
       margin-bottom : 50px;
-      border:1px solid red;
    }
    #search_nav{
       margin-bottom : 50px;
    }
    #history, #popular{
       cursor: pointer;
+      display: block;
+      padding: 16px;
+      text-align: center;
+      border : 1px solid #007acc;
+      background-color: white;
+      color: black;
+      font-size: 20px;
+   }
+   #history:hover, #popular:hover{
+      background-color: #e6eeff;
+ 	  color: black;
    }
    /*맵입력*/
 
+#kk_map {
+width: 700px;
+TOP: 81PX;
+height: 400px;
+z-index: 1;
+}
 
+/*타이틀*/
+
+#kk_title {
+width: 100%;
+height: 100px;
+background-color: #68ca86;
+margin-top: 6%;
+
+}
+.kk_wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+.kk_wrap * {padding: 0;margin: 0;}
+.kk_wrap .kk_info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+.kk_wrap .kk_info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+.kk_info .kk_title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+.kk_info .kk_close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+.kk_info .kk_close:hover {cursor: pointer;}
+.kk_info .kk_body {position: relative;overflow: hidden;}
+.kk_info .kk_desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+.kk_desc .kk_ellipsis {overflow: visible;text-overflow: ellipsis;white-space: pre-line;}
+.kk_desc .kk_jibun {font-size: 11px;color: #888;margin-top: -2px;}
+.kk_info .kk_img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: visible;}
+.kk_info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+.kk_info .kk_link {color: #5085BB;}
 #title{
-	border : 1px solid red;
 	font-size: 40px;
 	font-weight:bold;
 	text-align: center;
@@ -160,7 +196,55 @@ body{
 	margin-bottom : 20px;
 }
 #user_info{
-	border: 1px solid red;
 	font-size: 20px;
 	margin-bottom : 5px;
+}
+.button {
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 223px;
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+.button4:hover {background-color: #e7e7e7;}
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#search_go{
+	background-color: white;
+	width : 60px;
+}
+#search_val{
+	width: 200px;
+}
+.result_bar{
+	height : 50px;
+	background-color: #007acc;
+	color: white;
+	font-size: 25px;
+	line-height: 2;
+}
+.detail_wrap{
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+.detail_wrap div{
+	padding : 5px;
+	font-size: 15px;
+	font-weight: bold;
 }

@@ -1,15 +1,9 @@
-
-
-
 //요청 페이지 크기
 var pageSize=10;
 //요청 url
 var url="https://dapi.kakao.com/v2/local/search/keyword.json?";
 $(document).ready(function(){
-	$(window).on("popstate",function(e){
-		console.log(e.originalEvent.state);
-		state=e.originalEvent.state;
-	});
+	
 	/*window.addEventListener('popstate', function () {
 	    console.log('popstate', history.state);
 	  });*/
@@ -22,6 +16,7 @@ $(document).ready(function(){
 	}
 
 	pageClickFn = function(type){
+		
 		//검색 키워드
 		var keyword=$("#search_val").val();
 		//현재 페이지
@@ -30,6 +25,9 @@ $(document).ready(function(){
 		var lastpage=$("#totalPage").val();
 		//페이지 정보
 		var page_info=$("#page_info").val();
+		
+		var state = new Object();
+		state.type = page_info;
 		
 		if(type=="first_page" || type=="pre_page"){
 			if(curPage==1){
@@ -45,32 +43,44 @@ $(document).ready(function(){
 		}
 		
 		if(page_info=="search"){
+			
+				state.keyword = keyword;
+				state.url = url;
+				state.realSearch = false;
 			if(type=="first_page"){
-				
+				state.curPage = 1;
 				ajaxGetSearch(keyword, 1, url, false);
 			}else if(type=="pre_page"){
+				state.curPage = Number(curPage)-1;
 				ajaxGetSearch(keyword, Number(curPage)-1, url, false);
 			}else if(type=="next_page"){
-				
+				state.curPage = Number(curPage)+1;
 				ajaxGetSearch(keyword, Number(curPage)+1, url, false);
 			}else if(type=="last_page"){
+				state.curPage = lastpage;
 				ajaxGetSearch(keyword, lastpage, url, false);
 			}
+			
 		}else if(page_info=="history"){
 			if(type=="first_page"){
-				ajax_get_history(1);
+				state.curPage = 1;
+				ajaxGetHistory(1);
 			}else if(type=="pre_page"){
-				ajax_get_history(Number(curPage)-1);
+				state.curPage = Number(curPage)-1;
+				ajaxGetHistory(Number(curPage)-1);
 			}else if(type=="next_page"){
-				ajax_get_history(Number(curPage)+1);
+				state.curPage = Number(curPage)+1;
+				ajaxGetHistory(Number(curPage)+1);
 			}else if(type=="last_page"){
-				ajax_get_history(lastpage);
+				state.curPage = lastpage;
+				ajaxGetHistory(lastpage);
 			}
 		}
+		history.pushState(state,"",state.type+state.curPage);
+		console.log(JSON.stringify(history.state));
 	}
 
 	var ajax_paging = function(data){
-		display_none_set();
 		var total_count = data.totalElements;
 		var pageSize = data.size;
 		var curPage = data.number+1;
@@ -101,39 +111,8 @@ $(document).ready(function(){
 		}
 	}
 
-	//type : search, searchPaging, detail, history, historyPaging, popular
-	pushStateFnc = function(type){
-		
-		switch(type){
-		case "search":
-			
-			break;
-		case "searchPaging":
-			
-			break;
-		case "detail":
-			
-			break;
-		case "history":
-			
-			break;
-		case "historyPaging":
-			
-			break;
-		case "popular":
-			history.pushState("state","","");
-			if(state==undefined){
-				history.pushState("state","","");
-			}
-			break;
-		}
-		history.pushState("state","","");
-		if(state==undefined){
-			history.pushState("state","","");
-		}
-	}
-	placeDetail = function(id, keyword, url, pageSize, curPage){
-		history.pushState(curPage,"","Detail");
+
+	ajaxGetPlaceDetail = function(id, keyword, url, pageSize, curPage){
 		display_none_set();
 		$.get("/main/place/detail",
 			{ id : id,
@@ -144,14 +123,32 @@ $(document).ready(function(){
 			},
 			function(data,status){
 					data = JSON.parse(data);
-					var detail_text='<div> 이름 : '+data.place_name+'</div>'+
-					'<div> 구주소 : '+data.address_name+'</div>'+
-					'<div> 도로명주소 : '+data.roadAddress_name+'</div>'+
-					'<div> URL : '+data.place_url+'</div>'+
-					'<div> 전화번호 : '+data.phone+'</div>'+
-					'<a href="https://map.kakao.com/link/map/'+data.id+'">'+'지도 바로가기</a>'+
-					'<div id="kk_map"></div>';
-					$("#search_detail").html(detail_text);
+					var phoneText = '<div> 전화번호 : '+data.phone+'</div>';
+					var urlText = '<div> URL : '+data.place_url+'</div>';
+					var loadAddrText = '<div> 도로명 주소 : '+data.roadAddress_name+'</div>';
+					if(data.roadAddress_name==undefined){
+						loadAddrText="";
+					}
+					if(data.phone==undefined){
+						phoneText="";
+					}
+					if(data.place_url==undefined){
+						urlText="";
+					}
+					
+					var detail_text=
+						'<div class="detail_wrap">'+
+							'<div> 장소 명 : '+data.place_name+'</div>'+
+							'<div> 구 주소 : '+data.address_name+'</div>'+
+							loadAddrText+
+							urlText+
+							phoneText+
+							'<div>'+
+								'<a href="https://map.kakao.com/link/map/'+data.id+'">'+'지도 바로가기</a>'+
+							'</div>'+
+						'</div>'+
+						'<div id="kk_map"></div>';
+					$("#search_detail").append(detail_text);
 					$("#search_detail").css("display","inline");
 					var mapContainer = document.getElementById('kk_map'), // 지도의 중심좌표
 				    mapOption = { 
@@ -179,7 +176,8 @@ $(document).ready(function(){
 			        			  			'<div class="kk_img"> <img src="http://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">'+
 			        			  			'</div>'+
 			        			  			'<div class="kk_desc">'+
-			        			  				'<div class="kk_ellipsis">'+data.road_address_name+'</div>'+
+			        			  				'<div class="kk_ellipsis">(구)'+data.address_name+'</div>'+
+			        			  				'<div class="kk_ellipsis">(신)'+data.road_address_name+'</div>'+
 			        			  			'</div>'+
 			        			  		'</div>'+
 			        			  	'</div>'+
@@ -200,20 +198,46 @@ $(document).ready(function(){
 					}
 			}
 			
-		);
+		).fail(function(jqXHR){
+				alert(jqXHR.status+"에러!! : "+jqXHR.responseText);		
+		});
 		
 	}
 	
-	pageMove = function(pageNum){
+	pageMove = function(pageNum, type){
 		//조회수 증가 여부
 		var realSearch=false;
 		//검색 키워드
 		var keyword=$("#search_val").val();
-		ajaxGetSearch(keyword, pageNum, url, realSearch);
+		var state = new Object();
+		state.type = type;
+		state.curPage = pageNum;
+		if(type=="search"){
+			state.keyword = keyword;
+			state.url = url;
+			state.realSearch = realSearch;
+			ajaxGetSearch(keyword, pageNum, url, realSearch);
+		}else if(type=="history"){
+			state.curPage = pageNum;
+			ajaxGetHistory(pageNum);
+		}
+		history.pushState(state,"",type+""+pageNum);
 	}
 	
+	searchDetailFnc = function(id, keyword, url, pageSize, curPage) {
+		var state = new Object;
+		state.type = "detail";
+		state.id = id;
+		state.keyword = keyword;
+		state.url = url;
+		state.pageSize = pageSize;
+		state.curPage = curPage;
+		ajaxGetPlaceDetail(id, keyword, url, pageSize, curPage);
+	}
+	
+	
 	ajaxGetSearch = function(keyword, curPage, url, realSearch){
-		history.pushState(curPage,"","search"+curPage);
+		display_none_set();
 		$.get("/main/place/search",
 			{ keyword : keyword,
 			  curPage : curPage,
@@ -221,7 +245,7 @@ $(document).ready(function(){
 			  url : url,
 			  realSearch : realSearch
 			},
-			function(data, status){
+			function(data){
 				var jsonData = JSON.parse(data);
 				var paging_data = new Object();
 				paging_data.totalElements = jsonData.meta.pageable_count;
@@ -240,9 +264,9 @@ $(document).ready(function(){
 				var page_text='';
 				for(var i=startPage;i<=endPage;i++){
 					if(i==curPage){
-						page_text = page_text+'<li class="active pageNumber"><a onclick="pageMove('+i+');">'+i+'</a></li>'
+						page_text = page_text+'<li class="active pageNumber"><a onclick="pageMove('+i+',\'search\');">'+i+'</a></li>'
 					}else{
-						page_text = page_text+'<li class="pageNumber"><a onclick="pageMove('+i+');">'+i+'</a></li>'
+						page_text = page_text+'<li class="pageNumber"><a onclick="pageMove('+i+',\'search\');">'+i+'</a></li>'
 					}
 					
 				}
@@ -251,9 +275,13 @@ $(document).ready(function(){
 				$.each(result_data,function(key,value){
 					result_text=result_text+"<div class='divTableBody'>"+
 								"<div class='divTableRow'>"+
+								"<div class='divTableCell'>"+(Number(Number(pageSize)*(Number(curPage)-1))+(Number(key)+1))+"</div>"+
 								"<div class='divTableCell'>"+
-								"<a onclick='placeDetail("+value.id+",\""+keyword+"\",\""+url+"\",\""+pageSize+"\",\""+curPage+"\");'>"+value.place_name+"</a>"+
-								"</div>"+
+								"<a onclick='searchDetailFnc("+value.id+",\""+keyword+"\",\""+url+"\",\""+pageSize+"\",\""+curPage+"\");'>"+value.place_name+"</a>"+
+								"</div>" +
+								"<div class='divTableCell'>"+
+								"<a onclick='searchDetailFnc("+value.id+",\""+keyword+"\",\""+url+"\",\""+pageSize+"\",\""+curPage+"\");'>"+value.address_name+"</a>"+
+								"</div>" +
 								"</div>"+
 								"</div>";		
 				});
@@ -262,13 +290,16 @@ $(document).ready(function(){
 				$("#paging_button").css("display","inline");
 				$("#search_result").css("display","inline");
 			}
-		);
+		).fail(function(jqXHR){
+				alert(jqXHR.status+"에러!! : "+jqXHR.responseText);		
+		});
 	}
 	
 	ajaxGetPopular = function(){
-		history.pushState(curPage,"","popular");
-			$.get("/main/popular",
+		display_none_set();
+		$.get("/main/popular",
 			function(data,status){
+				console.log(data=="");
 				if(data.totalElements==0){
 					alert("검색 결과가 없습니다.");
 					return;
@@ -294,11 +325,13 @@ $(document).ready(function(){
 				$(".divTableHeading").after(result_text);
 				$("#popular_result").css("display","inline");
 			}
-		);
+		).fail(function(jqXHR){
+				alert(jqXHR.status+"에러!! : "+jqXHR.responseText);		
+		});
 	}
 	
-	ajax_get_history = function(curPage){
-		history.pushState(curPage,"","histoy"+curPage);
+	ajaxGetHistory = function(curPage){
+		display_none_set();
 		$("#page_info").val("history");
 		$.get("/main/history",
 				{curPage : curPage},
@@ -315,20 +348,22 @@ $(document).ready(function(){
 				var page_text='';
 				for(var i=startPage;i<=endPage;i++){
 					if(i==curPage){
-						page_text = page_text+'<li class="active pageNumber"><a onclick="ajax_get_history('+i+');">'+i+'</a></li>'
+						page_text = page_text+'<li class="active pageNumber"><a onclick="pageMove('+i+',\'history\');">'+i+'</a></li>'
 					}else{
-						page_text = page_text+'<li class="pageNumber"><a onclick="ajax_get_history('+i+');">'+i+'</a></li>'
+						page_text = page_text+'<li class="pageNumber"><a onclick="pageMove('+i+',\'history\');">'+i+'</a></li>'
 					}
 					
 				}
 				
 				var result_text='';
 				$.each(result_data,function(key,value){
+					var time = value.createDateTime.replace("T"," ");
+					time = time.substr(0, time.length-4);
 					result_text=result_text+"<div class='divTableBody'>"+
 												"<div class='divTableRow'>"+
 													"<div class='divTableCell'>"+(Number(Number(pageSize)*(Number(curPage)-1))+(Number(key)+1))+"</div>"+
 													"<div class='divTableCell'>"+value.keyword+"</div>"+
-													"<div class='divTableCell'>"+value.createDateTime+"</div>"+
+													"<div class='divTableCell'>"+time+"</div>"+
 												"</div>"+
 											"</div>";		
 				});
@@ -337,11 +372,11 @@ $(document).ready(function(){
 				$("#paging_button").css("display","inline");
 				$("#history_result").css("display","inline");
 			}
-		);
+		).fail(function(jqXHR){
+				alert(jqXHR.status+"에러!! : "+jqXHR.responseText);		
+		});
 	}
-	
-	$("#search_go").on("click",function(){
-		display_none_set();
+	searchFnc = function(){
 		//검색 키워드
 		var keyword=$("#search_val").val();
 		$("#keyword").val(keyword);
@@ -349,9 +384,24 @@ $(document).ready(function(){
 			alert("키워드를 입력해 주세요");
 			return;
 		}
-		//페이지 정보
 		$("#page_info").val("search");
+		var state = new Object();
+		state.type = "search";
+		state.keyword = keyword;
+		state.curPage = 1;
+		state.url = url;
+		state.realSearch = true;
+		history.pushState(state,'',state.type+""+state.curPage);
+		history.pushState(state,'',state.type+""+state.curPage);
 		ajaxGetSearch(keyword, 1, url, true);
+	}
+	$("#search_go").on("click",function(){
+		searchFnc();
+	});
+	$("#search_val").on("keydown",function(key){
+		if(key.keyCode ==13 ){
+			searchFnc();
+		}
 	});
 	
 	$("#first_page").on("click",function(){
@@ -367,10 +417,63 @@ $(document).ready(function(){
 		pageClickFn($(this).attr("id"));
 	});
 	$("#history").on("click",function(){
-		ajax_get_history(1);
+		var state = new Object();
+		state.type = "history";
+		state.curPage = 1;
+		history.pushState(state,'',"history"+state.curPage);
+		ajaxGetHistory(1);
 	});
 	$("#popular").on("click",function(){
-			ajaxGetPopular();
+		var state = new Object();
+		state.type = "popular";
+		history.pushState(state,'',state.type);
+		ajaxGetPopular();
 	});
 	
+	$(window).on("popstate",function(e){
+		//var state_info=JSON.stringify(event.state);
+		var state = history.state;
+		if(state==null){
+			location.href="/main";
+		}else if(state.type=="detail"){
+			ajaxGetPlaceDetail(state.id, state.keyword, state.url, state.pageSize, state.curPage);
+		}else if(state.type=="search"){
+			ajaxGetSearch(state.keyword, state.curPage, state.url, false);
+		}else if(state.type=="popular"){
+			ajaxGetPopular();
+		}else if(state.type=="history"){
+			ajaxGetHistory(state.curPage);
+		}
+	});
+
 });
+/*$(document).keydown(function (e) {
+	// F5, ctrl + F5, ctrl + r 새로고침 막기
+	var allowPageList 	= new Array('/a.php', '/b.php');
+	var bBlockF5Key		= true;
+	for (number in allowPageList) {
+		var regExp = new RegExp('^' + allowPageList[number] + '.*', 'i');
+		if (regExp.test(document.location.pathname)) {
+			bBlockF5Key = false;
+			break;
+		}
+	}
+	
+	if (bBlockF5Key) {
+		if (e.which === 116) {
+			if (typeof event == "object") {
+				event.keyCode = 0;
+			}
+			return false;
+		} else if (e.which === 82 && e.ctrlKey) {
+			return false;
+		}
+	}
+});*/
+
+
+		
+		
+		
+		
+		

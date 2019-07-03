@@ -32,7 +32,6 @@ public class JsonConverterUtil {
 			jp = new JSONParser();
 			jo = (JSONObject)jp.parse(data);
 			jo = (JSONObject)jo.get(searchType);
-			log.info(jo.get("is_end").toString());
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
