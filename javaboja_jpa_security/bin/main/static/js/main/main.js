@@ -232,6 +232,7 @@ $(document).ready(function(){
 		state.url = url;
 		state.pageSize = pageSize;
 		state.curPage = curPage;
+		history.pushState(state,'',state.type+""+state.curPage);
 		ajaxGetPlaceDetail(id, keyword, url, pageSize, curPage);
 	}
 	
