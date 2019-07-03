@@ -4,9 +4,6 @@ var pageSize=10;
 var url="http://dapi.kakao.com/v2/local/search/keyword.json?";
 $(document).ready(function(){
 	
-	/*window.addEventListener('popstate', function () {
-	    console.log('popstate', history.state);
-	  });*/
 	display_none_set = function() {
 		$("#search_detail").css("display","none");
 		$("#history_result").css("display","none");
@@ -77,7 +74,6 @@ $(document).ready(function(){
 			}
 		}
 		history.pushState(state,"",state.type+state.curPage);
-		console.log(JSON.stringify(history.state));
 	}
 
 	var ajax_paging = function(data){
@@ -300,9 +296,8 @@ $(document).ready(function(){
 		display_none_set();
 		$.get("/main/popular",
 			function(data,status){
-				console.log(data=="");
-				if(data.totalElements==0){
-					alert("검색 결과가 없습니다.");
+				if(data.length==0){
+					alert("해당 결과가 없습니다.");
 					return;
 				}
 				display_none_set();
@@ -338,7 +333,7 @@ $(document).ready(function(){
 				{curPage : curPage},
 			function(data,status){
 				if(data.totalElements==0){
-					alert("검색 결과가 없습니다.");
+					alert("해당 결과가 없습니다.");
 					return;
 				}
 				var pagingObject = ajax_paging(data);
